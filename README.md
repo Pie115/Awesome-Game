@@ -5,7 +5,7 @@ Our team wants to make an RPG fighting type game all in the console. We wanted t
 The features that we want to implement consist of the following:
 > * Have the player select a character to play as in the begining. Each with different abilities.
 > * Have the player phase off against several enemies, each with increasing difficulty. 
-> * Have the payer access an item shop where they can upgrade equipment/abilities.
+> * Have the payer access an item shop, between battles, where they can upgrade equipment/abilities.
 > * Have a leaderboard based on points earned through several different factors throughout the game.
 
  > ## Phase II
