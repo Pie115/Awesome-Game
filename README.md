@@ -1,24 +1,13 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9935895&assignment_repo_type=AssignmentRepo)
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# Awesome Console Game
- > Your author list below should include links to all members GitHub (remove existing author).
- 
- > Authors: [Paimon Goulart](https://github.com/Pie115), [Dylan Nguyen](https://github.com/dylannguyen079), [Ivan Ao](https://github.com/fhzzzs), [Robert Layco](https://github.com/lay6351)
-
- > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
-
- > ## Expectations
- > * The backend of your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
- > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
- > * **Each member of the group must actively participate in the Github Project board, writing unit tests, and reviewing commited code.**
-> * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
 
 ## Project Description 
-Our team wants to make a platformer type game all in the console. This project is signifigant to us because our whole group loves to play video games, and grew up playing video games, so doing a game for a final school project is like a dream come true. We want to implement the game just using the C++ console. We will design the levels with different keyboard characters. We want to have the user use the arrow keys as input in order to move around, and have another button as an input in order for the player to attack as well. We want to have different enemies and structures in the level as well as some items for the player to retrieve and puzzles for the player to complete as well. Before the game starts we will have the player input their name so we can have a leader board that keeps track of the players final stats. The final defining feature of the game is that we want to randomize the level design. We never want the player to start in the same level twice. We want to have the computer randomly generate a level before the player starts. The output would be a final leader board that displays the players stats, as well as high scores.
- 
+Our team wants to make an RPG fighting type game all in the console. We wanted to make it similar to Final Fantasy, or Pokemon. This project is signifigant to us because our whole group loves to play video games, and grew up playing video games, so doing a game for a final school project is like a dream come true. We want to implement the game just using the C++ console. We want to make the game text based at first, if we have more time in the end we can consider implementing graphics.
+The features that we want to implement consist of the following:
+> * Have the player select a character to play as in the begining. Each with different abilities.
+> * Have the player phase off against several enemies, each with increasing difficulty. 
+> * Have the payer access an item shop where they can upgrade equipment/abilities.
+> * Have a leaderboard based on points earned through several different factors throughout the game.
+
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
