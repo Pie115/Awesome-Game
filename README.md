@@ -9,6 +9,10 @@ The features that we want to implement consist of the following:
 > * Have a leaderboard based on points earned through several different factors throughout the game.
 
  > ## Phase II
+ > ![IMG_1154](https://user-images.githubusercontent.com/116398521/218637192-3cb6514c-b9f6-4774-b2b0-89ee0c12eea9.JPG)
+ > 
+ > Description: The character class is an abstract class with derived classes Boss and PlayableCharacter. The Boss and PlayableCharacter class will have abilities, items and special traits that will affect overall gameplay.
+ > 
  > In addition to completing the "Class Diagram" section below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
  > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
