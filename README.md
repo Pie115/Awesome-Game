@@ -1,10 +1,15 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9935895&assignment_repo_type=AssignmentRepo)
 
-Authors:
-Paimon Goulart - https://github.com/Pie115
-Robert Layco - https://github.com/lay6351
-Ivan Ao - https://github.com/fhzzzs
-Dylan Nguyen - https://github.com/dylannguyen079
+Authors:  
+
+Paimon Goulart - https://github.com/Pie115. 
+
+Robert Layco - https://github.com/lay6351. 
+
+Ivan Ao - https://github.com/fhzzzs. 
+
+Dylan Nguyen - https://github.com/dylannguyen079. 
+
 
 ## Project Description 
 Our team wants to make an RPG fighting type game all in the console. We wanted to make it similar to Final Fantasy, or Pokemon. This project is signifigant to us because our whole group loves to play video games, and grew up playing video games, so doing a game for a final school project is like a dream come true. We want to implement the game just using the C++ console. We want to make the game text based at first, if we have more time in the end we can consider implementing graphics.
