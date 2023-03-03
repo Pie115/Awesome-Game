@@ -18,10 +18,9 @@ The features that we want to implement consist of the following:
 > * Have the player phase off against several enemies, each with increasing difficulty. 
 > * Have the payer access an item shop, between battles, where they can upgrade equipment/abilities.
 > * Have a leaderboard based on points earned through several different factors throughout the game.
-
- > ![IMG_1154](https://user-images.githubusercontent.com/116398521/218637192-3cb6514c-b9f6-4774-b2b0-89ee0c12eea9.JPG)
- > 
- > Description: The character class is an abstract class with derived classes Boss and PlayableCharacter. The Boss and PlayableCharacter class will have abilities, items and special traits that will affect overall gameplay.
+ > ![Untitled Diagram](https://user-images.githubusercontent.com/116398521/222713848-54d9edf4-1966-45be-8cf6-8baefd53bc3d.jpg)
+ 
+ > Description: The character class is an abstract class with derived classes Boss and PlayableCharacter. The Boss and PlayableCharacter class will have abilities, items and special traits that will affect overall gameplay. The Boss and Character classes will be handled by the Game and GameManager.
  > 
 Single Responsibility Principle:
 Adding a game and game manager class to separate inputs and outputs. The game manager manages the inputs of the game such as starting/quitting the game, creating a character, using abilities, and calling the game itself to input the actions in the game class. The game class takes the inputs from the game manager and outputs depending on the game manager. The changes allow us to separate the outputs and the inputs which allows us to have more organized functionality.
