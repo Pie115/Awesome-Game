@@ -28,7 +28,7 @@ Adding a game and game manager class to separate inputs and outputs. The game ma
 Liskov Substitution Principle:
 We add bosses with their own unique items and abilities. The playable character classhave their own unique items and abilities. These classes are inherited from the character class. They all have the same basic attack with different abilities and items. This will prevent the playable character from using abilities and items that only a boss should use and vice versa.
 
-Integration Solution Principle:
+Interface Segregation Principle:
 As a playable character, we don't need voicelines. We decided that it should be unique to the boss. We removed the starting voiceline, ending voiceline, and voiceline variable from the main character class. We removed the respected getters and setters from the main character class as well. We added it to only be used by Boss. Voicelines for the characters would not have made sense and would have made or code much messier than it needed to be.
 
 
