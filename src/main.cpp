@@ -6,9 +6,7 @@
 #include "./header/specialTrait.h"
 using namespace std;
 main()
-{
-    Character *a = new Character();
-    
+{    
 
     return 0;
 }
