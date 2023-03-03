@@ -9,20 +9,20 @@ class Character
         ~Character();
 
         // setter
-        virtual void setNames(std::string n);
+        virtual void setNames(std::string& n);
         virtual void setHealth(double h);
         virtual void setDamage(double d);
         virtual void setResistance(double r);
-        virtual void setStartingVoiceLine(std::string SVL);  //svl = starting voice line
-        virtual void setEndingVoiceLine(std::string EVL);    //evl = ending voice line
-        virtual void addRandomVoiceLine(std::string RVL);    //rvl = random voice line
+        virtual void setStartingVoiceLine(std::string& SVL);  //svl = starting voice line
+        virtual void setEndingVoiceLine(std::string& EVL);    //evl = ending voice line
+        virtual void addRandomVoiceLine(std::string& RVL);    //rvl = random voice line
 
         // getter
 
         virtual std::string getNames() const;
         virtual double getHealth() const;
         virtual double getDamage() const;
-        virtual double getResistance() const;
+        virtual double getResistance() c~onst;
         virtual std::string getStartingVoiceLine() const;
         virtual std::string getEndingVoiceLine() const;
         virtual std::string getRandomVoiceLine() const;
