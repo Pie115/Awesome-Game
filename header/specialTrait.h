@@ -1,8 +1,0 @@
-#ifndef SPECIALTRAIT_HPP
-#define SPECIALTRAIT_HPP
-
-
-
-
-
-#endif //SPECIALTRAIT_HPP
