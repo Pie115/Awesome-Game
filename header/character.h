@@ -2,6 +2,8 @@
 #define CHARACTER_HPP
 #include <string>
 #include <vector>
+
+using namespace std; 
 class Character
 {
     public:
@@ -9,22 +11,22 @@ class Character
         ~Character();
 
         // setter
-        virtual void setNames(std::string& n);
-        virtual void setHealth(int h);
-        virtual void setDamage(int d);
-
+        void setNames(const string& n);
+        void setHealth(int h);
+        void setDamage(int d);
+        void takeDamage(int d);
         // getter
 
-        virtual std::string getNames() const;
-        virtual int getHealth() const;
-        virtual int getDamage() const;
+        string getNames() const;
+        int getHealth() const;
+        int getDamage() const;
         
     private:
-        std::string names = ""; 
+        string names = ""; 
         int health = 0;
         int damage = 0;
 
-}
+};
 
 
 #endif // CHARACTER_HPP
