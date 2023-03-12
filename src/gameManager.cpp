@@ -1,91 +1,86 @@
 #include iostream
 #include gameManager.h
+#include playableCharacter.h
+#include enemy.h
 
-void GameManager::GameLoop() {
-    bool gameOver = false;
-    PlayableCharacter player;
-    Enemy enemy; 
-    int round = 1;
-    while(!gameOver) {
-           OutputGameScreen(player, enemy, round);
-           char input = GetInput();
-        switch (input)
-           {
-      
-        case 'a': //player attacks
-            if(enemy.isDefeated()) {
-            enemy = GenerateNewEnemy(round);
-            round++;
-           }
-           break;
-        
-        case 'd': //player defends
-           player.Defend();
-           break;
 
-        case 'i': //access item shop
-           AccessItemShop(player);
-           break;
+using namespace std;
 
-        case 'q': //quit game
-           game_over = true;
-           break;
-        
-           
-        default:
-            OutputInvalidInput();
-            break;
-           }
-             // Enemy attacks
-        if (!enemy.IsDefeated()) {
-            enemy.Attack(player);
-            if (player.IsDefeated()) {
-                // Player defeated
-                game_over = true;
-            }
-        }
+GameManger::GameManager() {
+    player = new PlayableCharacter();
+    game = new Game(player);
+    enemy = GenerateNewEnemy(1);
+
+}
+GameManager::~GameManager() {
+    delete player;
+    delete game;
+}
+
+
+GameManager::runGame() {
+    displayMenu();
+    while(!game) {
+        string input;
+        getline(cin, input);
+        handleInput(input);
+        game.update();
     }
+     game.displayGameOver();
 
-    // Output game over screen to console
-    OutputGameOverScreen(player_score);
 }
+void GameManager::setPlayerName(string name) {
+    playerName = name;
+    player->setName(playerName);
+}
+string GameManager::getPlayerName() const {
+    return playerName;
+}
+GameManager::setSelectedCharacter(int characterIndex) {
+    selectedCharacterIndex = characterIndex;
+}
+int GameManager::getSelectedCharacter() const {
+    return selectedCharacterIndex;
+}
+
+void GameManager::displayMenu() {
+    cout << "Welcome to the Awesome Fighting Game!\n\n";
+    cout << "1. Start Game\n";
+    cout << "2. Change Player Name\n";
+    cout << "3. Change Character\n";
+    cout << "4. Quit\n";
+    cout << "\nEnter the number of your choice: ";
+}
+
+void GameManger::OutputInvalid() {
     
-void GameManager::OutputGameScreen(PlayerCharacter player, Enemy enemy, int round_number) {
-    std::cout << "Round " << round_number << "\n\n";
-    std::cout << "Player: " << player.GetName() << "\n";
-    std::cout << "HP: " << player.GetHealth() << "\n\n";
-    std::cout << "Enemy: " << enemy.GetName() << "\n";
-    std::cout << "HP: " << enemy.GetHealth() << "\n\n";
-    std::cout << "Options:\n";
-    std::cout << "a - Attack\n";
-    std::cout << "d - Defend\n";
-    std::cout << "i - Item shop\n";
-    std::cout << "q - Quit game\n\n";
-}
-char GameManager::GetInput() {
-    char input;
-    std::cout << "Enter option: ";
-    std::cin >> input;
-    std::cout << "\n";
-    return input;
 }
 
-void GameManager::AccessItemShop(PlayerCharacter& player) {
+void GameManager::handleInput(string input) {
+    if (input == "1") {
+        game.startNewGame(playerName, selectedCharacterIndex);
+    } else if (input == "2") {
+        cout << "Enter your new name: ";
+        getline(cin, input);
+        setPlayerName(input);
+    } else if (input == "3") {
+        cout << "Select your character:\n";
+        cout << "1. Archer\n";
+        cout << "2. Mage\n";
+        cout << "3. Warrior\n";
+        cout << "\nEnter the number of your choice: ";
+        getline(cin, input);
+        setSelectedCharacter(stoi(input) - 1);
+    } else if (input == "4") {
+        game.quit();
+    } else {
+        cout << "Invalid input. Please try again.\n";
+        displayMenu();
+    }
+}
+
+
  
-}
-
-void GameManager::OutputInvalidInput() {
-    std::cout << "Invalid input. Please try again.\n\n";
-}
-
-void GameManager::OutputGameOverScreen(int player_score) {
-    std::cout << "Game over\n";
-    std::cout << "Final score: " << player_score << "\n";
-}
-
-Enemy GameManager::GenerateNewEnemy(int round_number) {
-
-}
 
 
 
