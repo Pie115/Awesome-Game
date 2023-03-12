@@ -4,37 +4,35 @@
 #include <vector>
 #include <string>
 
+using namespace std;
+
 class Boss : public Character
 {
     private: 
-        std::vector<std::string> bossPassive;
-        std::vector<std::string> bossAbility;
-        std::vector<std::string> bossItem;
-        std::string startingVoiceLine = "";
-        std::string endingVoiceLine = "";
-        std::vector<std::string> randomVoiceLine;
+        vector<string> bossPassive;
+        vector<string> bossAbility;
+        vector<string> bossItem;
+        string startingVoiceLine = "";
+        string endingVoiceLine = "";
+        vector<string> randomVoiceLine;
     
     public:
         //setters
-        void setBossPassive(std::string&);
-        void setBossAbility(std::string&);
-        void setBossItem(std::string&);
-        void setStartingVoiceLine(std::string&);
-        void setEndingVoiceLine(std::string&);
-        void setRandomVoiceLine(std::string&);
+        void setBossPassive(const string& s);
+        void setBossAbility(const string& s);
+        void setBossItem(const string& s);
+        void setStartingVoiceLine(const string& s);
+        void setEndingVoiceLine(const string& s);
+        void setRandomVoiceLine(const string& s);
 
         //getters
-        std::vector<std::string> getBossPassive() const;
-        std::vector<std::string> getBossAbility() const;
-        std::vector<std::string> getBossItem() const;
-        std::string getStartingVoiceLine() const;
-        std::string getEndingVoiceLine() const;
-        std::string getRandomVoiceLine() const;
-}
+        vector<string> getBossPassive() const;
+        vector<string> getBossAbility() const;
+        vector<string> getBossItem() const;
+        string getStartingVoiceLine() const;
+        string getEndingVoiceLine() const;
+        string getRandomVoiceLine() const;
+};
 
 
-
-
-
-
-#endif //BOSS_HPP
+#endif

@@ -1,20 +1,19 @@
 #ifndef PLAYABLECHARACTER_HPP
 #define PLAYABLECHARACTER_HPP
 #include "./header/character.h"
+
+using namespace std;
+
 class PlayableCharacter : public Character
 {
     private:
-        std::string PlayablePassive;
-        //std::vector<Abilities> PlayableAbility(); TODO - ADD ABILITY
-        //std::vector<Items> PlayableItems(); TODO - ADD ITEMS
-
+        vector<string> PlayableAbility; 
+        vector<string> PlayableItems; 
     public:
-        void setPlayablePassive(std::string);
-        void setPlayableAbility(); //TODO - ADD ABILITIES
-        void setPlayableItems(); //TODO - ADD ABILITIES
-        std::string getPlayablePassive();
-        std::string getPlayableAbility();
-        std::string getPlayableItems();
+        void setPlayableAbility(const string& a); 
+        void setPlayableItems(const string& a); 
+        string getPlayableAbility(int index);
+        string getPlayableItems(int index);
 };
 
 #endif PLAYABLECHARACTER_HPP;

@@ -1,29 +1,18 @@
 #include "./header/character.h"
 #include "./header/playableCharacter.h"
 
-void PlayableCharacter::setPlayablePassive(std::string input_passive) {
-    PlayablePassive = input_passive;
+void PlayableCharacter::setPlayableAbility(const string& a) {
+    PlayableAbility.push_back(a);
 }
 
-
-void PlayableCharacter::setPlayableAbility() {
-    // Add Abilities input_ability
+void PlayableCharacter::setPlayableItems(const string& a){
+    PlayableItems.push_back(a);
 }
 
-void PlayableCharacter::setPlayableItems(){
-    // Add Items input_item
+string PlayableCharacter::getPlayableAbility(int index){ 
+    return PlayableAbility[index];
 }
 
-
-std::string PlayableCharacter::getPlayablePassive(){
-    return PlayablePassive;
-}
-
-
-std::string PlayableCharacter::getPlayableAbility(){
-    
-}
-
-std::string PlayableCharacter::getPlayableItems(){
-
+string PlayableCharacter::getPlayableItems(int index){
+    return PlayableItems[index];
 }
