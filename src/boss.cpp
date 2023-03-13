@@ -1,11 +1,9 @@
-#include "./header/boss.h"
+#include "../header/character.h"
+#include "../header/boss.h"
 #include <cstdlib> 
 
 using namespace std;
 
-void Boss::setBossPassive(const string& s){
-    bossPassive.push_back(s);
-}
 
 void Boss::setBossAbility(const string& s){
     bossAbility.push_back(s);
@@ -27,13 +25,9 @@ void Boss::setRandomVoiceLine(const string& s){
     randomVoiceLine.push_back(s);
 }
 
-
-vector<string> Boss::getBossPassive() const { 
-    return bossPassive;
-}
-
-vector<string> Boss::getBossAbility() const { 
-    return bossAbility;
+string Boss::getBossAbility() const { 
+    srand(time(nullptr));
+    return bossAbility[rand() % bossAbility.size()];
 }
 
 vector<string> Boss::getBossItem() const { 
@@ -50,6 +44,7 @@ string Boss::getEndingVoiceLine() const {
 
 string Boss::getRandomVoiceLine() const
 {
+    srand(time(nullptr));
     // return random voice from 0 to randomVoiceLine.capacity.
     return randomVoiceLine[rand() % randomVoiceLine.size()];
 }

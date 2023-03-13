@@ -2,6 +2,9 @@
 #define CHARACTER_HPP
 #include <string>
 #include <vector>
+#include <random>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std; 
 class Character
@@ -15,8 +18,9 @@ class Character
         void setHealth(int h);
         void setDamage(int d);
         void takeDamage(int d);
-        // getter
+        void heal(int d);
 
+        // getter
         string getNames() const;
         int getHealth() const;
         int getDamage() const;
