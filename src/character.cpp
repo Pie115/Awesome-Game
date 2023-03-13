@@ -1,4 +1,4 @@
-#include "./header/character.h"
+#include "../header/character.h"
 
 
 Character::Character(){
@@ -21,6 +21,10 @@ void Character::setDamage(int d){
 
 void Character::takeDamage(int d){
     health = health - d;
+}
+
+void Character::heal(int h){
+    health = health + h;
 }
 
 string Character::getNames() const{ 

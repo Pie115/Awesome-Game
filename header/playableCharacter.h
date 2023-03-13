@@ -1,6 +1,6 @@
 #ifndef PLAYABLECHARACTER_HPP
 #define PLAYABLECHARACTER_HPP
-#include "./header/character.h"
+#include "character.h"
 
 using namespace std;
 
@@ -12,8 +12,11 @@ class PlayableCharacter : public Character
     public:
         void setPlayableAbility(const string& a); 
         void setPlayableItems(const string& a); 
+
+        int getAbilityNum();
+        
         string getPlayableAbility(int index);
         string getPlayableItems(int index);
 };
 
-#endif PLAYABLECHARACTER_HPP;
+#endif PLAYABLECHARACTER_HPP
