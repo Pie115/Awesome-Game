@@ -32,4 +32,4 @@ class Boss : public Character
 };
 
 
-#endif
+#endif //BOSS_HPP

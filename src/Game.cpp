@@ -1,9 +1,41 @@
 #include "../header/Game.h"
 
-void Game::RunGame(){ 
-    string name;
-    cout<<"Welcome fighter, please enter a name you would like to go by:"<<endl;
-    cin>>name;
+void Game::MainMenu(){
+    int menu_choice = 0;
+    cout<<"Welcome to Awesome Game!!"<<endl;
+    cout<<"Input 0 to quit game"<<endl;
+    cout<<"Input 1 to start game"<<endl;
+    cout<<"Input 2 for info on how to play"<<endl;
+
+    cin>>menu_choice;
+
+    while(menu_choice < 0 || (!cin.good()) || menu_choice >= 2){
+        if(menu_choice == 2){
+            cout<<"Awesome game is a turn based fighting game!"<<endl;
+            cout<<"As the player you shall face off against an array of different battles"<<endl;
+            cout<<"You will use different abilities and items to defeat your enemies"<<endl;
+            cout<<"With smart decision making and luck, you should be victorious"<<endl;
+            cout<<"Good luck! You will need it >:)"<<endl;
+        }
+
+        else{
+        cin.clear();
+        cin.ignore(1, '\n');
+        cout<<"Enter a valid option: "<<endl;
+        }
+
+        cout<<"Input 0 to quit game"<<endl;
+        cout<<"Input 1 to start game"<<endl;
+        cout<<"Input 2 for info on how to play"<<endl;
+        cin>>menu_choice;
+    }
+
+    if(menu_choice == 0){
+        abort();
+    }
+}
+
+void Game::StartGame(const string& name){
     player->setNames(name);
     player->setHealth(40);
     player->setDamage(20);
@@ -19,10 +51,19 @@ void Game::RunGame(){
     boss->setRandomVoiceLine("Good luck with this!");
     boss->setEndingVoiceLine("How is this even possible?!?!");
 
+}
+
+
+void Game::RunGame(){ 
+    string name;
+    cout<<"Welcome fighter, please enter a name you would like to go by:"<<endl;
+    cin>>name;
+    StartGame(name);
+
+
     cout<<"Very well, "<<player->getNames()<<" I hope you prepared well"<<endl;
     cout<<"You will be facing against "<<boss->getNames()<<"!"<<endl;
     cout<<endl;
-
     cout<<boss->getNames()<<": '"<<boss->getStartingVoiceLine()<<"'"<<endl;
     while(boss->getHealth() > 0 && player->getHealth() > 0){
 
@@ -94,15 +135,18 @@ void Game::RunGame(){
             boss_ability = boss->getBossAbility();
             
             if(boss_ability == "mega swing"){
+                int tempdamage;
                 cout<<boss->getNames()<<" uses "<<boss_ability<<endl;
                 if(block == true){
-                    cout<<player->getNames()<<" blocks!"<<player->getNames()<<" takes "<<(1/2)*(boss->getDamage())<<" damage!"<<endl;
-                    player->takeDamage((1/2)*boss->getDamage());
+                    tempdamage = (0.5)*(boss->getDamage());
+                    cout<<player->getNames()<<" blocks! "<<player->getNames()<<" takes "<<(0.5)*(boss->getDamage())<<" damage!"<<endl;
+                    player->takeDamage(tempdamage);
                 }
                 else{
                     cout<<player->getNames()<<" takes "<<(boss->getDamage())<<" damage!"<<endl;
                     player->takeDamage(boss->getDamage());
                 }
+                tempdamage = 0;
             }
         }
     }
@@ -110,6 +154,6 @@ void Game::RunGame(){
         cout<<player->getNames()<<" lost! Better luck next time!"<<endl;
     }
     else{
-        cout<<boss->getNames()<<" was defeated! you may move on to the next"<<endl;
+        cout<<boss->getNames()<<" was defeated! You may move on to the next boss"<<endl;
     }
 }
