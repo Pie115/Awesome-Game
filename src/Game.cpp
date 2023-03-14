@@ -3,6 +3,14 @@
 void Game::Allocate(){
     player = new PlayableCharacter();
     boss = new Boss();
+
+    megasmash = new abilities();
+
+    swordslash = new abilities();
+    shieldbash = new abilities();
+    whirlwind = new abilities();
+    heartpierce = new abilities();
+
 }
 
 void Game::MainMenu(){
@@ -40,31 +48,73 @@ void Game::MainMenu(){
     }
 }
 
-void Game::StartGame(const string& name){
+void Game::StartGame(const string& name, int characterclass){
+
+    megasmash->setAbilityName("Mega Smash");
+    megasmash->setAbilityDamageMultiplier(1);
+    megasmash->setAbilityPercentMiss(40);
+
+    swordslash->setAbilityName("Sword Slash");
+    swordslash->setAbilityDamageMultiplier(1.3);
+    swordslash->setAbilityPercentMiss(40);
+
+    shieldbash->setAbilityName("Shield Bash");
+    shieldbash->setAbilityDamageMultiplier(0.5);
+    shieldbash->setAbilityPercentMiss(0);
+
+    whirlwind->setAbilityName("Whirlwind");
+    whirlwind->setAbilityDamageMultiplier(0.7);
+    whirlwind->setAbilityPercentMiss(20);
+
+    heartpierce->setAbilityName("Heart Pierce");
+    heartpierce->setAbilityDamageMultiplier(1000);
+    heartpierce->setAbilityPercentMiss(99);
+
+
     player->setNames(name);
-    player->setHealth(40);
+    player->setHealth(400);
     player->setDamage(20);
-    player->setPlayableAbility("basic attack");
+
+
+    if(characterclass == 1){
+        player->setPlayableAbility(swordslash);
+        player->setPlayableAbility(shieldbash);
+        player->setPlayableAbility(whirlwind);
+        player->setPlayableAbility(heartpierce);
+    }
 
     boss->setNames("A weird looking training dummy");
-    boss->setHealth(20);
+    boss->setHealth(200);
     boss->setDamage(10);
-    boss->setBossAbility("mega swing");
+    boss->setBossAbility(megasmash);
     boss->setStartingVoiceLine("I will crush you!");
     boss->setRandomVoiceLine("Take this!");
     boss->setRandomVoiceLine("You won't stand a chance!");
     boss->setRandomVoiceLine("Good luck with this!");
     boss->setEndingVoiceLine("How is this even possible?!?!");
 
+
 }
 
 
 void Game::RunGame(){ 
     string name;
+    int characterclass;
     cout<<"Welcome fighter, please enter a name you would like to go by:"<<endl;
     cin>>name;
-    StartGame(name);
-
+    cout<<"Great, now pick a class:"<<endl;
+    cout<<"1: Warrior"<<endl;
+    cout<<"2: Archer"<<endl;
+    cout<<"3: Mage"<<endl; 
+    cin>>characterclass;
+    while(characterclass < 0 || (!cin.good()) || characterclass > 3){
+        cout<<"Enter a valid option:"<<endl;
+        cout<<"1: Warrior"<<endl;
+        cout<<"2: Archer"<<endl;
+        cout<<"3: Mage"<<endl;
+        cin>>characterclass;
+    }
+    StartGame(name, characterclass);
 
     cout<<"Very well, "<<player->getNames()<<" I hope you prepared well"<<endl;
     cout<<"You will be facing against "<<boss->getNames()<<"!"<<endl;
@@ -107,22 +157,25 @@ void Game::RunGame(){
             cout<<"Choices:"<<endl;
 
             for(int i = 0; i < player->getAbilityNum(); i++){
-                cout<<i+1<<": "<<player->getPlayableAbility(i)<<endl;
+                cout<<i+1<<": "<<(player->getPlayableAbility(i))->getAbilityName()<<endl;
             }
             cin>>player_action;
-            while(player_action < player->getAbilityNum() || player_action > player->getAbilityNum() || (!cin.good())){
+            while(player_action < 1 || player_action > player->getAbilityNum() || (!cin.good())){
                 cout<<"That is not a valid choice, please select a valid ability"<<endl;
                 cout<<"Choices:"<<endl;
 
                 for(int i = 0; i < player->getAbilityNum(); i++){
-                    cout<<i+1<<": "<<player->getPlayableAbility(i)<<endl;
+                    cout<<i+1<<": "<<(player->getPlayableAbility(i))->getAbilityName()<<endl;
                 }
                 cin>>player_action;
             }
-            if(player->getPlayableAbility(player_action-1) == "basic attack"){
-                cout<<player->getNames()<<" uses "<<player->getPlayableAbility(player_action-1)<<endl;
-                cout<<boss->getNames()<<" takes "<<player->getDamage()<<" damage!"<<endl;
-                boss->takeDamage(player->getDamage());
+            cout<<player->getNames()<<" uses "<<(player->getPlayableAbility(player_action-1))->getAbilityName()<<endl;
+            if((player->getPlayableAbility(player_action-1))->AttackMiss() == false){
+                cout<<boss->getNames()<<" takes "<<player->getDamage() * (player->getPlayableAbility(player_action-1))->getAbilityDamageMultiplier()<<" damage!"<<endl;
+                boss->takeDamage(player->getDamage() * (player->getPlayableAbility(player_action-1))->getAbilityDamageMultiplier());
+            }
+            else{
+                cout<<"But it missed!"<<endl;
             }
             player_action = 0;
         }
@@ -136,22 +189,27 @@ void Game::RunGame(){
         if(boss->getHealth() > 0){
             cout<<"Bosses turn:"<<endl;
             cout<<boss->getNames()<<": '"<<boss->getRandomVoiceLine()<<"'"<<endl;
-            string boss_ability;
+            abilities* boss_ability;
             boss_ability = boss->getBossAbility();
-            
-            if(boss_ability == "mega swing"){
-                int tempdamage;
-                cout<<boss->getNames()<<" uses "<<boss_ability<<endl;
+
+            int tempdamage;
+            cout<<boss->getNames()<<" uses "<<boss_ability->getAbilityName()<<endl;
+
+            if(boss_ability->AttackMiss() == false){
                 if(block == true){
-                    tempdamage = (0.5)*(boss->getDamage());
-                    cout<<player->getNames()<<" blocks! "<<player->getNames()<<" takes "<<(0.5)*(boss->getDamage())<<" damage!"<<endl;
+                    tempdamage = (0.5)*(boss->getDamage()) * (boss_ability->getAbilityDamageMultiplier());
+                    cout<<player->getNames()<<" blocks! "<<player->getNames()<<" takes "<<tempdamage<<" damage!"<<endl;
                     player->takeDamage(tempdamage);
                 }
                 else{
+                    tempdamage = (boss->getDamage()) * (boss_ability->getAbilityDamageMultiplier());
                     cout<<player->getNames()<<" takes "<<(boss->getDamage())<<" damage!"<<endl;
                     player->takeDamage(boss->getDamage());
                 }
                 tempdamage = 0;
+            }
+            else{
+                cout<<"But it missed!"<<endl;
             }
         }
     }
@@ -159,11 +217,17 @@ void Game::RunGame(){
         cout<<player->getNames()<<" lost! Better luck next time!"<<endl;
     }
     else{
-        cout<<boss->getNames()<<" was defeated! You may move on to the next boss"<<endl;
+        cout<<boss->getNames()<<" was defeated! You may move on to the next boss!"<<endl;
     }
 }
     
 void Game::Deallocate(){
     delete player;
     delete boss;
+    delete megasmash;
+
+    delete swordslash;
+    delete shieldbash;
+    delete whirlwind;
+    delete heartpierce;
 }
