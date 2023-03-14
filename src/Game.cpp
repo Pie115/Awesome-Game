@@ -1,6 +1,6 @@
 #include "../header/Game.h"
 
-void Game::Allocate(){
+Game::Game(){
     player = new PlayableCharacter();
     boss = new Boss();
 
@@ -21,9 +21,30 @@ void Game::Allocate(){
     lightingstrike = new abilities();
     polymorph = new abilities();
 
-
-
 }
+
+
+Game::~Game(){
+    delete player;
+    delete boss;
+    delete megasmash;
+
+    delete swordslash;
+    delete shieldbash;
+    delete whirlwind;
+    delete heartpierce;
+
+    delete piercingshot;
+    delete explosivearrow;
+    delete multishot;
+    delete headshot;
+
+    delete fireball;
+    delete iceshard;
+    delete lightingstrike;
+    delete polymorph;
+}
+
 
 void Game::MainMenu(){
     int menu_choice = 0;
@@ -283,23 +304,3 @@ void Game::RunGame(){
     }
 }
     
-void Game::Deallocate(){
-    delete player;
-    delete boss;
-    delete megasmash;
-
-    delete swordslash;
-    delete shieldbash;
-    delete whirlwind;
-    delete heartpierce;
-
-    delete piercingshot;
-    delete explosivearrow;
-    delete multishot;
-    delete headshot;
-
-    delete fireball;
-    delete iceshard;
-    delete lightingstrike;
-    delete polymorph;
-}

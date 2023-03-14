@@ -32,11 +32,11 @@ class Game
 
 
     public:
-        void Allocate();
+        Game();
+        ~Game();
         void MainMenu();
         void StartGame(const string& name, int characterclass);
         void RunGame();
-        void Deallocate();
 };
 
 
