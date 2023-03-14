@@ -1,5 +1,10 @@
 #include "../header/Game.h"
 
+void Game::Allocate(){
+    player = new PlayableCharacter();
+    boss = new Boss();
+}
+
 void Game::MainMenu(){
     int menu_choice = 0;
     cout<<"Welcome to Awesome Game!!"<<endl;
@@ -156,4 +161,9 @@ void Game::RunGame(){
     else{
         cout<<boss->getNames()<<" was defeated! You may move on to the next boss"<<endl;
     }
+}
+    
+void Game::Deallocate(){
+    delete player;
+    delete boss;
 }

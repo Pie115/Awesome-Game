@@ -8,13 +8,15 @@ class Game
 {
 
     private:
-        PlayableCharacter* player = new PlayableCharacter();
-        Boss* boss = new Boss(); 
+        PlayableCharacter* player;
+        Boss* boss; 
 
     public:
+        void Allocate();
         void MainMenu();
         void StartGame(const string& name);
         void RunGame();
+        void Deallocate();
 };
 
 
