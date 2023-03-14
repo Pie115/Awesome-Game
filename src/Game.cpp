@@ -11,6 +11,18 @@ void Game::Allocate(){
     whirlwind = new abilities();
     heartpierce = new abilities();
 
+    piercingshot = new abilities();
+    explosivearrow = new abilities();
+    multishot = new abilities();
+    headshot = new abilities();
+
+    fireball = new abilities();
+    iceshard = new abilities();
+    lightingstrike = new abilities();
+    polymorph = new abilities();
+
+
+
 }
 
 void Game::MainMenu(){
@@ -49,11 +61,12 @@ void Game::MainMenu(){
 }
 
 void Game::StartGame(const string& name, int characterclass){
-
+    //boss_abilities
     megasmash->setAbilityName("Mega Smash");
     megasmash->setAbilityDamageMultiplier(1);
     megasmash->setAbilityPercentMiss(40);
 
+    //warrior_abilities
     swordslash->setAbilityName("Sword Slash");
     swordslash->setAbilityDamageMultiplier(1.3);
     swordslash->setAbilityPercentMiss(40);
@@ -70,6 +83,40 @@ void Game::StartGame(const string& name, int characterclass){
     heartpierce->setAbilityDamageMultiplier(1000);
     heartpierce->setAbilityPercentMiss(99);
 
+    //archer_abilities
+    piercingshot->setAbilityName("Piercing Shot");
+    piercingshot->setAbilityDamageMultiplier(1.9);
+    piercingshot->setAbilityPercentMiss(50);
+
+    explosivearrow->setAbilityName("Explosive Arrow");
+    explosivearrow->setAbilityDamageMultiplier(0.7);
+    explosivearrow->setAbilityPercentMiss(10);
+
+    multishot->setAbilityName("multishot");
+    multishot->setAbilityDamageMultiplier(0.9);
+    multishot->setAbilityPercentMiss(20);
+
+    headshot->setAbilityName("Head Shot");
+    headshot->setAbilityDamageMultiplier(1000);
+    headshot->setAbilityPercentMiss(99);
+
+    //mage_abilities
+    fireball->setAbilityName("Fireball");
+    fireball->setAbilityDamageMultiplier(2);
+    fireball->setAbilityPercentMiss(55);
+
+    iceshard->setAbilityName("Ice Shard");
+    iceshard->setAbilityDamageMultiplier(0.6);
+    iceshard->setAbilityPercentMiss(10);
+
+    lightingstrike->setAbilityName("lightningstrike");
+    lightingstrike->setAbilityDamageMultiplier(0.3);
+    lightingstrike->setAbilityPercentMiss(0);
+
+    polymorph->setAbilityName("Polymorph");
+    polymorph->setAbilityDamageMultiplier(1000);
+    polymorph->setAbilityPercentMiss(95);
+
 
     player->setNames(name);
     player->setHealth(400);
@@ -77,12 +124,26 @@ void Game::StartGame(const string& name, int characterclass){
 
 
     if(characterclass == 1){
+        cout<<"You've chosen the warrior"<<endl;
         player->setPlayableAbility(swordslash);
         player->setPlayableAbility(shieldbash);
         player->setPlayableAbility(whirlwind);
         player->setPlayableAbility(heartpierce);
     }
-
+    if(characterclass == 2){
+        cout<<"You've chosen the archer"<<endl;
+        player->setPlayableAbility(piercingshot);
+        player->setPlayableAbility(explosivearrow);
+        player->setPlayableAbility(multishot);
+        player->setPlayableAbility(headshot);
+    }
+    if(characterclass == 3){
+        cout<<"You've chosen the mage"<<endl;
+        player->setPlayableAbility(fireball);
+        player->setPlayableAbility(iceshard);
+        player->setPlayableAbility(lightingstrike);
+        player->setPlayableAbility(polymorph);
+    }
     boss->setNames("A weird looking training dummy");
     boss->setHealth(200);
     boss->setDamage(10);
@@ -107,7 +168,7 @@ void Game::RunGame(){
     cout<<"2: Archer"<<endl;
     cout<<"3: Mage"<<endl; 
     cin>>characterclass;
-    while(characterclass < 0 || (!cin.good()) || characterclass > 3){
+    while(characterclass <= 0 || (!cin.good()) || characterclass > 3){
         cout<<"Enter a valid option:"<<endl;
         cout<<"1: Warrior"<<endl;
         cout<<"2: Archer"<<endl;
@@ -152,6 +213,7 @@ void Game::RunGame(){
             cout<<"4: Info"<<endl;
             cin>>player_action;
         }
+        system("clear");
         if(player_action == 1){
             cout<<"Which ability would you like to use?"<<endl;
             cout<<"Choices:"<<endl;
@@ -230,4 +292,14 @@ void Game::Deallocate(){
     delete shieldbash;
     delete whirlwind;
     delete heartpierce;
+
+    delete piercingshot;
+    delete explosivearrow;
+    delete multishot;
+    delete headshot;
+
+    delete fireball;
+    delete iceshard;
+    delete lightingstrike;
+    delete polymorph;
 }

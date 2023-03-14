@@ -18,6 +18,17 @@ class Game
         abilities* whirlwind;
         abilities* heartpierce;
 
+        abilities* piercingshot;
+        abilities* explosivearrow;
+        abilities* multishot;
+        abilities* headshot;
+        
+        abilities* fireball;
+        abilities* iceshard;
+        abilities* lightingstrike;
+        abilities* polymorph;
+
+
 
 
     public:
