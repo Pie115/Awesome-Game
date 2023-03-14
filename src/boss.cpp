@@ -1,11 +1,11 @@
 #include "../header/character.h"
 #include "../header/boss.h"
-#include <cstdlib> 
+
 
 using namespace std;
 
 
-void Boss::setBossAbility(const string& s){
+void Boss::setBossAbility(abilities* s){
     bossAbility.push_back(s);
 }
 
@@ -25,7 +25,7 @@ void Boss::setRandomVoiceLine(const string& s){
     randomVoiceLine.push_back(s);
 }
 
-string Boss::getBossAbility() const { 
+abilities* Boss::getBossAbility(){ 
     srand(time(nullptr));
     return bossAbility[rand() % bossAbility.size()];
 }
