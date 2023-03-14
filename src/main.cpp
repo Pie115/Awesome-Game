@@ -7,10 +7,8 @@ using namespace std;
 int main()
 {
     Game* game = new Game();
-    game->Allocate();
     game->MainMenu();
     game->RunGame();
-    game->Deallocate();
 
     delete game;
     return 0;
