@@ -12,10 +12,12 @@ class Game
         Boss* boss = new Boss(); 
 
     public:
+        void MainMenu();
+        void StartGame(const string& name);
         void RunGame();
 };
 
 
 
 
-#endif GAME_HPP
+#endif //GAME_HPP

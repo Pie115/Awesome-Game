@@ -19,4 +19,4 @@ class PlayableCharacter : public Character
         string getPlayableItems(int index);
 };
 
-#endif PLAYABLECHARACTER_HPP
+#endif //PLAYABLECHARACTER_HPP
