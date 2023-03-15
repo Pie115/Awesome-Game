@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/home/csmajs/pgoul002/final-project-awesome-game
+CMAKE_SOURCE_DIR = /home/csmajs/pgoul002/final-project-awesome-game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/home/csmajs/pgoul002/final-project-awesome-game
+CMAKE_BINARY_DIR = /home/csmajs/pgoul002/final-project-awesome-game
 
 # Include any dependencies generated for this target.
 include CMakeFiles/AwesomeGame.dir/depend.make
@@ -72,86 +72,86 @@ include CMakeFiles/AwesomeGame.dir/flags.make
 CMakeFiles/AwesomeGame.dir/src/main.cpp.o: CMakeFiles/AwesomeGame.dir/flags.make
 CMakeFiles/AwesomeGame.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/AwesomeGame.dir/src/main.cpp.o: CMakeFiles/AwesomeGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AwesomeGame.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/main.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/main.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/main.cpp.o -c /data/home/csmajs/pgoul002/final-project-awesome-game/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AwesomeGame.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/main.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/main.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/main.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/main.cpp
 
 CMakeFiles/AwesomeGame.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AwesomeGame.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/pgoul002/final-project-awesome-game/src/main.cpp > CMakeFiles/AwesomeGame.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/src/main.cpp > CMakeFiles/AwesomeGame.dir/src/main.cpp.i
 
 CMakeFiles/AwesomeGame.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AwesomeGame.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/pgoul002/final-project-awesome-game/src/main.cpp -o CMakeFiles/AwesomeGame.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/src/main.cpp -o CMakeFiles/AwesomeGame.dir/src/main.cpp.s
 
 CMakeFiles/AwesomeGame.dir/src/boss.cpp.o: CMakeFiles/AwesomeGame.dir/flags.make
 CMakeFiles/AwesomeGame.dir/src/boss.cpp.o: src/boss.cpp
 CMakeFiles/AwesomeGame.dir/src/boss.cpp.o: CMakeFiles/AwesomeGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AwesomeGame.dir/src/boss.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/boss.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/boss.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/boss.cpp.o -c /data/home/csmajs/pgoul002/final-project-awesome-game/src/boss.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AwesomeGame.dir/src/boss.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/boss.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/boss.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/boss.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/boss.cpp
 
 CMakeFiles/AwesomeGame.dir/src/boss.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AwesomeGame.dir/src/boss.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/pgoul002/final-project-awesome-game/src/boss.cpp > CMakeFiles/AwesomeGame.dir/src/boss.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/src/boss.cpp > CMakeFiles/AwesomeGame.dir/src/boss.cpp.i
 
 CMakeFiles/AwesomeGame.dir/src/boss.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AwesomeGame.dir/src/boss.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/pgoul002/final-project-awesome-game/src/boss.cpp -o CMakeFiles/AwesomeGame.dir/src/boss.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/src/boss.cpp -o CMakeFiles/AwesomeGame.dir/src/boss.cpp.s
 
 CMakeFiles/AwesomeGame.dir/src/character.cpp.o: CMakeFiles/AwesomeGame.dir/flags.make
 CMakeFiles/AwesomeGame.dir/src/character.cpp.o: src/character.cpp
 CMakeFiles/AwesomeGame.dir/src/character.cpp.o: CMakeFiles/AwesomeGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AwesomeGame.dir/src/character.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/character.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/character.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/character.cpp.o -c /data/home/csmajs/pgoul002/final-project-awesome-game/src/character.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AwesomeGame.dir/src/character.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/character.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/character.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/character.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/character.cpp
 
 CMakeFiles/AwesomeGame.dir/src/character.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AwesomeGame.dir/src/character.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/pgoul002/final-project-awesome-game/src/character.cpp > CMakeFiles/AwesomeGame.dir/src/character.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/src/character.cpp > CMakeFiles/AwesomeGame.dir/src/character.cpp.i
 
 CMakeFiles/AwesomeGame.dir/src/character.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AwesomeGame.dir/src/character.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/pgoul002/final-project-awesome-game/src/character.cpp -o CMakeFiles/AwesomeGame.dir/src/character.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/src/character.cpp -o CMakeFiles/AwesomeGame.dir/src/character.cpp.s
 
 CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o: CMakeFiles/AwesomeGame.dir/flags.make
 CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o: src/playableCharacter.cpp
 CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o: CMakeFiles/AwesomeGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o -c /data/home/csmajs/pgoul002/final-project-awesome-game/src/playableCharacter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/playableCharacter.cpp
 
 CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/pgoul002/final-project-awesome-game/src/playableCharacter.cpp > CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/src/playableCharacter.cpp > CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.i
 
 CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/pgoul002/final-project-awesome-game/src/playableCharacter.cpp -o CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/src/playableCharacter.cpp -o CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.s
 
 CMakeFiles/AwesomeGame.dir/src/Game.cpp.o: CMakeFiles/AwesomeGame.dir/flags.make
 CMakeFiles/AwesomeGame.dir/src/Game.cpp.o: src/Game.cpp
 CMakeFiles/AwesomeGame.dir/src/Game.cpp.o: CMakeFiles/AwesomeGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AwesomeGame.dir/src/Game.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/Game.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/Game.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/Game.cpp.o -c /data/home/csmajs/pgoul002/final-project-awesome-game/src/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AwesomeGame.dir/src/Game.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/Game.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/Game.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/Game.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/Game.cpp
 
 CMakeFiles/AwesomeGame.dir/src/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AwesomeGame.dir/src/Game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/pgoul002/final-project-awesome-game/src/Game.cpp > CMakeFiles/AwesomeGame.dir/src/Game.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/src/Game.cpp > CMakeFiles/AwesomeGame.dir/src/Game.cpp.i
 
 CMakeFiles/AwesomeGame.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AwesomeGame.dir/src/Game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/pgoul002/final-project-awesome-game/src/Game.cpp -o CMakeFiles/AwesomeGame.dir/src/Game.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/src/Game.cpp -o CMakeFiles/AwesomeGame.dir/src/Game.cpp.s
 
 CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o: CMakeFiles/AwesomeGame.dir/flags.make
 CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o: src/abilities.cpp
 CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o: CMakeFiles/AwesomeGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o -c /data/home/csmajs/pgoul002/final-project-awesome-game/src/abilities.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o -MF CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o.d -o CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/abilities.cpp
 
 CMakeFiles/AwesomeGame.dir/src/abilities.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AwesomeGame.dir/src/abilities.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/csmajs/pgoul002/final-project-awesome-game/src/abilities.cpp > CMakeFiles/AwesomeGame.dir/src/abilities.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/src/abilities.cpp > CMakeFiles/AwesomeGame.dir/src/abilities.cpp.i
 
 CMakeFiles/AwesomeGame.dir/src/abilities.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AwesomeGame.dir/src/abilities.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/csmajs/pgoul002/final-project-awesome-game/src/abilities.cpp -o CMakeFiles/AwesomeGame.dir/src/abilities.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/src/abilities.cpp -o CMakeFiles/AwesomeGame.dir/src/abilities.cpp.s
 
 # Object files for target AwesomeGame
 AwesomeGame_OBJECTS = \
@@ -173,7 +173,7 @@ AwesomeGame: CMakeFiles/AwesomeGame.dir/src/Game.cpp.o
 AwesomeGame: CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o
 AwesomeGame: CMakeFiles/AwesomeGame.dir/build.make
 AwesomeGame: CMakeFiles/AwesomeGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable AwesomeGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable AwesomeGame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AwesomeGame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -185,6 +185,6 @@ CMakeFiles/AwesomeGame.dir/clean:
 .PHONY : CMakeFiles/AwesomeGame.dir/clean
 
 CMakeFiles/AwesomeGame.dir/depend:
-	cd /data/home/csmajs/pgoul002/final-project-awesome-game && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /data/home/csmajs/pgoul002/final-project-awesome-game /data/home/csmajs/pgoul002/final-project-awesome-game /data/home/csmajs/pgoul002/final-project-awesome-game /data/home/csmajs/pgoul002/final-project-awesome-game /data/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles/AwesomeGame.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/csmajs/pgoul002/final-project-awesome-game && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles/AwesomeGame.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/AwesomeGame.dir/depend
 

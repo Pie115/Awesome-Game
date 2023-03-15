@@ -1,7 +1,7 @@
 CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o: \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/playableCharacter.cpp \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/playableCharacter.cpp \
  /usr/include/stdc-predef.h \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/../header/character.h \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/character.h \
  /usr/include/c++/8/string \
  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -112,6 +112,6 @@ CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o: \
  /usr/include/c++/8/x86_64-redhat-linux/bits/opt_random.h \
  /usr/include/c++/8/bits/random.tcc /usr/include/c++/8/numeric \
  /usr/include/c++/8/bits/stl_numeric.h /usr/include/c++/8/ctime \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/../header/playableCharacter.h \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/../header/character.h \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/../header/abilities.h
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/playableCharacter.h \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/character.h \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/abilities.h

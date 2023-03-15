@@ -1,7 +1,6 @@
-CMakeFiles/AwesomeGame.dir/src/main.cpp.o: \
- /home/csmajs/pgoul002/final-project-awesome-game/src/main.cpp \
+CMakeFiles/test.dir/src/character.cpp.o: \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/character.cpp \
  /usr/include/stdc-predef.h \
- /home/csmajs/pgoul002/final-project-awesome-game/src/../header/boss.h \
  /home/csmajs/pgoul002/final-project-awesome-game/src/../header/character.h \
  /usr/include/c++/8/string \
  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
@@ -112,27 +111,4 @@ CMakeFiles/AwesomeGame.dir/src/main.cpp.o: \
  /usr/include/c++/8/bits/uniform_int_dist.h \
  /usr/include/c++/8/x86_64-redhat-linux/bits/opt_random.h \
  /usr/include/c++/8/bits/random.tcc /usr/include/c++/8/numeric \
- /usr/include/c++/8/bits/stl_numeric.h /usr/include/c++/8/ctime \
- /home/csmajs/pgoul002/final-project-awesome-game/src/../header/abilities.h \
- /home/csmajs/pgoul002/final-project-awesome-game/src/../header/playableCharacter.h \
- /home/csmajs/pgoul002/final-project-awesome-game/src/../header/Game.h \
- /home/csmajs/pgoul002/final-project-awesome-game/src/../header/boss.h \
- /home/csmajs/pgoul002/final-project-awesome-game/src/../header/playableCharacter.h \
- /usr/include/c++/8/iostream /usr/include/c++/8/ostream \
- /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
- /usr/include/c++/8/bits/locale_classes.h \
- /usr/include/c++/8/bits/locale_classes.tcc \
- /usr/include/c++/8/system_error \
- /usr/include/c++/8/x86_64-redhat-linux/bits/error_constants.h \
- /usr/include/c++/8/stdexcept /usr/include/c++/8/streambuf \
- /usr/include/c++/8/bits/streambuf.tcc \
- /usr/include/c++/8/bits/basic_ios.h \
- /usr/include/c++/8/bits/locale_facets.h /usr/include/c++/8/cwctype \
- /usr/include/wctype.h /usr/include/bits/wctype-wchar.h \
- /usr/include/c++/8/x86_64-redhat-linux/bits/ctype_base.h \
- /usr/include/c++/8/bits/streambuf_iterator.h \
- /usr/include/c++/8/x86_64-redhat-linux/bits/ctype_inline.h \
- /usr/include/c++/8/bits/locale_facets.tcc \
- /usr/include/c++/8/bits/basic_ios.tcc \
- /usr/include/c++/8/bits/ostream.tcc /usr/include/c++/8/istream \
- /usr/include/c++/8/bits/istream.tcc
+ /usr/include/c++/8/bits/stl_numeric.h /usr/include/c++/8/ctime

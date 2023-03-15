@@ -1,9 +1,9 @@
 CMakeFiles/AwesomeGame.dir/src/Game.cpp.o: \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/Game.cpp \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/Game.cpp \
  /usr/include/stdc-predef.h \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/../header/Game.h \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/../header/boss.h \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/../header/character.h \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/Game.h \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/boss.h \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/character.h \
  /usr/include/c++/8/string \
  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -114,8 +114,8 @@ CMakeFiles/AwesomeGame.dir/src/Game.cpp.o: \
  /usr/include/c++/8/x86_64-redhat-linux/bits/opt_random.h \
  /usr/include/c++/8/bits/random.tcc /usr/include/c++/8/numeric \
  /usr/include/c++/8/bits/stl_numeric.h /usr/include/c++/8/ctime \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/../header/abilities.h \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/../header/playableCharacter.h \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/abilities.h \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/playableCharacter.h \
  /usr/include/c++/8/iostream /usr/include/c++/8/ostream \
  /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
  /usr/include/c++/8/bits/locale_classes.h \

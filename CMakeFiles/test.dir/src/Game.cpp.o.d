@@ -1,6 +1,7 @@
-CMakeFiles/AwesomeGame.dir/src/main.cpp.o: \
- /home/csmajs/pgoul002/final-project-awesome-game/src/main.cpp \
+CMakeFiles/test.dir/src/Game.cpp.o: \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/Game.cpp \
  /usr/include/stdc-predef.h \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/Game.h \
  /home/csmajs/pgoul002/final-project-awesome-game/src/../header/boss.h \
  /home/csmajs/pgoul002/final-project-awesome-game/src/../header/character.h \
  /usr/include/c++/8/string \
@@ -114,9 +115,6 @@ CMakeFiles/AwesomeGame.dir/src/main.cpp.o: \
  /usr/include/c++/8/bits/random.tcc /usr/include/c++/8/numeric \
  /usr/include/c++/8/bits/stl_numeric.h /usr/include/c++/8/ctime \
  /home/csmajs/pgoul002/final-project-awesome-game/src/../header/abilities.h \
- /home/csmajs/pgoul002/final-project-awesome-game/src/../header/playableCharacter.h \
- /home/csmajs/pgoul002/final-project-awesome-game/src/../header/Game.h \
- /home/csmajs/pgoul002/final-project-awesome-game/src/../header/boss.h \
  /home/csmajs/pgoul002/final-project-awesome-game/src/../header/playableCharacter.h \
  /usr/include/c++/8/iostream /usr/include/c++/8/ostream \
  /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \

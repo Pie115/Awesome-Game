@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/home/csmajs/pgoul002/final-project-awesome-game
+CMAKE_SOURCE_DIR = /home/csmajs/pgoul002/final-project-awesome-game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/home/csmajs/pgoul002/final-project-awesome-game
+CMAKE_BINARY_DIR = /home/csmajs/pgoul002/final-project-awesome-game
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -77,35 +77,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -117,6 +88,35 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -132,9 +132,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles /data/home/csmajs/pgoul002/final-project-awesome-game//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles /home/csmajs/pgoul002/final-project-awesome-game//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -160,6 +160,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 #=============================================================================
 # Target rules for targets named AwesomeGame
@@ -231,6 +244,7 @@ src/Game.o: src/Game.cpp.o
 
 # target to build an object file
 src/Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Game.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/Game.cpp.o
 .PHONY : src/Game.cpp.o
 
@@ -239,6 +253,7 @@ src/Game.i: src/Game.cpp.i
 
 # target to preprocess a source file
 src/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Game.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/Game.cpp.i
 .PHONY : src/Game.cpp.i
 
@@ -247,6 +262,7 @@ src/Game.s: src/Game.cpp.s
 
 # target to generate assembly for a file
 src/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Game.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
@@ -255,6 +271,7 @@ src/abilities.o: src/abilities.cpp.o
 
 # target to build an object file
 src/abilities.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/abilities.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/abilities.cpp.o
 .PHONY : src/abilities.cpp.o
 
@@ -263,6 +280,7 @@ src/abilities.i: src/abilities.cpp.i
 
 # target to preprocess a source file
 src/abilities.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/abilities.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/abilities.cpp.i
 .PHONY : src/abilities.cpp.i
 
@@ -271,6 +289,7 @@ src/abilities.s: src/abilities.cpp.s
 
 # target to generate assembly for a file
 src/abilities.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/abilities.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/abilities.cpp.s
 .PHONY : src/abilities.cpp.s
 
@@ -279,6 +298,7 @@ src/boss.o: src/boss.cpp.o
 
 # target to build an object file
 src/boss.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/boss.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/boss.cpp.o
 .PHONY : src/boss.cpp.o
 
@@ -287,6 +307,7 @@ src/boss.i: src/boss.cpp.i
 
 # target to preprocess a source file
 src/boss.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/boss.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/boss.cpp.i
 .PHONY : src/boss.cpp.i
 
@@ -295,6 +316,7 @@ src/boss.s: src/boss.cpp.s
 
 # target to generate assembly for a file
 src/boss.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/boss.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/boss.cpp.s
 .PHONY : src/boss.cpp.s
 
@@ -303,6 +325,7 @@ src/character.o: src/character.cpp.o
 
 # target to build an object file
 src/character.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/character.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/character.cpp.o
 .PHONY : src/character.cpp.o
 
@@ -311,6 +334,7 @@ src/character.i: src/character.cpp.i
 
 # target to preprocess a source file
 src/character.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/character.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/character.cpp.i
 .PHONY : src/character.cpp.i
 
@@ -319,6 +343,7 @@ src/character.s: src/character.cpp.s
 
 # target to generate assembly for a file
 src/character.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/character.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/character.cpp.s
 .PHONY : src/character.cpp.s
 
@@ -351,6 +376,7 @@ src/playableCharacter.o: src/playableCharacter.cpp.o
 
 # target to build an object file
 src/playableCharacter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/playableCharacter.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.o
 .PHONY : src/playableCharacter.cpp.o
 
@@ -359,6 +385,7 @@ src/playableCharacter.i: src/playableCharacter.cpp.i
 
 # target to preprocess a source file
 src/playableCharacter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/playableCharacter.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.i
 .PHONY : src/playableCharacter.cpp.i
 
@@ -367,8 +394,33 @@ src/playableCharacter.s: src/playableCharacter.cpp.s
 
 # target to generate assembly for a file
 src/playableCharacter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/playableCharacter.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.s
 .PHONY : src/playableCharacter.cpp.s
+
+test.o: test.cpp.o
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -387,6 +439,7 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... test"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
@@ -405,6 +458,9 @@ help:
 	@echo "... src/playableCharacter.o"
 	@echo "... src/playableCharacter.i"
 	@echo "... src/playableCharacter.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

@@ -1,4 +1,4 @@
-CMakeFiles/AwesomeGame.dir/src/main.cpp.o: \
+CMakeFiles/test.dir/src/main.cpp.o: \
  /home/csmajs/pgoul002/final-project-awesome-game/src/main.cpp \
  /usr/include/stdc-predef.h \
  /home/csmajs/pgoul002/final-project-awesome-game/src/../header/boss.h \
