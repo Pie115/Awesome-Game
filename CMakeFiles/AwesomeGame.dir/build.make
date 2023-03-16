@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csmajs/pgoul002/final-project-awesome-game
+CMAKE_SOURCE_DIR = /data/home/csmajs/pgoul002/final-project-awesome-game
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/csmajs/pgoul002/final-project-awesome-game
@@ -185,6 +185,6 @@ CMakeFiles/AwesomeGame.dir/clean:
 .PHONY : CMakeFiles/AwesomeGame.dir/clean
 
 CMakeFiles/AwesomeGame.dir/depend:
-	cd /home/csmajs/pgoul002/final-project-awesome-game && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles/AwesomeGame.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/csmajs/pgoul002/final-project-awesome-game && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /data/home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game /home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles/AwesomeGame.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/AwesomeGame.dir/depend
 

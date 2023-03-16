@@ -61,9 +61,9 @@ class Game
     public:
         Game();
         ~Game();
-        void MainMenu();
+        int MainMenu();
         void StartGame(const string& name, int characterclass);
-        void RunGame();
+        int RunGame();
 };
 
 
