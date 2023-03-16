@@ -48,6 +48,7 @@ As a playable character, we don't need voicelines. We decided that it should be 
  
  ## Screenshots
  > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225709527-3ca614d9-a867-4f57-9045-2ad351d76fba.png)
+ > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225709944-46a30055-60a6-4d57-974a-62868a0a61cf.png)
  > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225709742-8dc2d132-1934-460f-bc94-9f219e2d54b0.png)
  
  ## Installation/Usage
