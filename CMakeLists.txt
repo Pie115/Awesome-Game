@@ -12,7 +12,11 @@ ADD_EXECUTABLE(AwesomeGame
 )
 
 ADD_EXECUTABLE(test
-    tests/test.cpp
+    tests/gametest.cpp
+    tests/abilitytest.cpp
+    tests/bosstest.cpp
+    tests/playableCharacterTests.cpp
+    tests/characterTest.cpp
     src/boss.cpp
     src/character.cpp
     src/playableCharacter.cpp
