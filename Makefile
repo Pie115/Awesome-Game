@@ -398,29 +398,125 @@ src/playableCharacter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AwesomeGame.dir/build.make CMakeFiles/AwesomeGame.dir/src/playableCharacter.cpp.s
 .PHONY : src/playableCharacter.cpp.s
 
-test.o: test.cpp.o
-.PHONY : test.o
+tests/abilitytest.o: tests/abilitytest.cpp.o
+.PHONY : tests/abilitytest.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.o
-.PHONY : test.cpp.o
+tests/abilitytest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/abilitytest.cpp.o
+.PHONY : tests/abilitytest.cpp.o
 
-test.i: test.cpp.i
-.PHONY : test.i
+tests/abilitytest.i: tests/abilitytest.cpp.i
+.PHONY : tests/abilitytest.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.i
-.PHONY : test.cpp.i
+tests/abilitytest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/abilitytest.cpp.i
+.PHONY : tests/abilitytest.cpp.i
 
-test.s: test.cpp.s
-.PHONY : test.s
+tests/abilitytest.s: tests/abilitytest.cpp.s
+.PHONY : tests/abilitytest.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.s
-.PHONY : test.cpp.s
+tests/abilitytest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/abilitytest.cpp.s
+.PHONY : tests/abilitytest.cpp.s
+
+tests/bosstest.o: tests/bosstest.cpp.o
+.PHONY : tests/bosstest.o
+
+# target to build an object file
+tests/bosstest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/bosstest.cpp.o
+.PHONY : tests/bosstest.cpp.o
+
+tests/bosstest.i: tests/bosstest.cpp.i
+.PHONY : tests/bosstest.i
+
+# target to preprocess a source file
+tests/bosstest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/bosstest.cpp.i
+.PHONY : tests/bosstest.cpp.i
+
+tests/bosstest.s: tests/bosstest.cpp.s
+.PHONY : tests/bosstest.s
+
+# target to generate assembly for a file
+tests/bosstest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/bosstest.cpp.s
+.PHONY : tests/bosstest.cpp.s
+
+tests/characterTest.o: tests/characterTest.cpp.o
+.PHONY : tests/characterTest.o
+
+# target to build an object file
+tests/characterTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/characterTest.cpp.o
+.PHONY : tests/characterTest.cpp.o
+
+tests/characterTest.i: tests/characterTest.cpp.i
+.PHONY : tests/characterTest.i
+
+# target to preprocess a source file
+tests/characterTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/characterTest.cpp.i
+.PHONY : tests/characterTest.cpp.i
+
+tests/characterTest.s: tests/characterTest.cpp.s
+.PHONY : tests/characterTest.s
+
+# target to generate assembly for a file
+tests/characterTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/characterTest.cpp.s
+.PHONY : tests/characterTest.cpp.s
+
+tests/gametest.o: tests/gametest.cpp.o
+.PHONY : tests/gametest.o
+
+# target to build an object file
+tests/gametest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/gametest.cpp.o
+.PHONY : tests/gametest.cpp.o
+
+tests/gametest.i: tests/gametest.cpp.i
+.PHONY : tests/gametest.i
+
+# target to preprocess a source file
+tests/gametest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/gametest.cpp.i
+.PHONY : tests/gametest.cpp.i
+
+tests/gametest.s: tests/gametest.cpp.s
+.PHONY : tests/gametest.s
+
+# target to generate assembly for a file
+tests/gametest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/gametest.cpp.s
+.PHONY : tests/gametest.cpp.s
+
+tests/playableCharacterTests.o: tests/playableCharacterTests.cpp.o
+.PHONY : tests/playableCharacterTests.o
+
+# target to build an object file
+tests/playableCharacterTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/playableCharacterTests.cpp.o
+.PHONY : tests/playableCharacterTests.cpp.o
+
+tests/playableCharacterTests.i: tests/playableCharacterTests.cpp.i
+.PHONY : tests/playableCharacterTests.i
+
+# target to preprocess a source file
+tests/playableCharacterTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/playableCharacterTests.cpp.i
+.PHONY : tests/playableCharacterTests.cpp.i
+
+tests/playableCharacterTests.s: tests/playableCharacterTests.cpp.s
+.PHONY : tests/playableCharacterTests.s
+
+# target to generate assembly for a file
+tests/playableCharacterTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/playableCharacterTests.cpp.s
+.PHONY : tests/playableCharacterTests.cpp.s
 
 # Help Target
 help:
@@ -458,9 +554,21 @@ help:
 	@echo "... src/playableCharacter.o"
 	@echo "... src/playableCharacter.i"
 	@echo "... src/playableCharacter.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... tests/abilitytest.o"
+	@echo "... tests/abilitytest.i"
+	@echo "... tests/abilitytest.s"
+	@echo "... tests/bosstest.o"
+	@echo "... tests/bosstest.i"
+	@echo "... tests/bosstest.s"
+	@echo "... tests/characterTest.o"
+	@echo "... tests/characterTest.i"
+	@echo "... tests/characterTest.s"
+	@echo "... tests/gametest.o"
+	@echo "... tests/gametest.i"
+	@echo "... tests/gametest.s"
+	@echo "... tests/playableCharacterTests.o"
+	@echo "... tests/playableCharacterTests.i"
+	@echo "... tests/playableCharacterTests.s"
 .PHONY : help
 
 

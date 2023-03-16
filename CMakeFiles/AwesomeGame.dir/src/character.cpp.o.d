@@ -1,7 +1,7 @@
 CMakeFiles/AwesomeGame.dir/src/character.cpp.o: \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/character.cpp \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/character.cpp \
  /usr/include/stdc-predef.h \
- /data/home/csmajs/pgoul002/final-project-awesome-game/src/../header/character.h \
+ /home/csmajs/pgoul002/final-project-awesome-game/src/../header/character.h \
  /usr/include/c++/8/string \
  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \

@@ -69,24 +69,80 @@ include CMakeFiles/test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test.dir/flags.make
 
-CMakeFiles/test.dir/test.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/test.cpp.o: test.cpp
-CMakeFiles/test.dir/test.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test.cpp.o -MF CMakeFiles/test.dir/test.cpp.o.d -o CMakeFiles/test.dir/test.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/test.cpp
+CMakeFiles/test.dir/tests/gametest.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/tests/gametest.cpp.o: tests/gametest.cpp
+CMakeFiles/test.dir/tests/gametest.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/tests/gametest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/tests/gametest.cpp.o -MF CMakeFiles/test.dir/tests/gametest.cpp.o.d -o CMakeFiles/test.dir/tests/gametest.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/tests/gametest.cpp
 
-CMakeFiles/test.dir/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/test.cpp > CMakeFiles/test.dir/test.cpp.i
+CMakeFiles/test.dir/tests/gametest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/tests/gametest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/tests/gametest.cpp > CMakeFiles/test.dir/tests/gametest.cpp.i
 
-CMakeFiles/test.dir/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/test.cpp -o CMakeFiles/test.dir/test.cpp.s
+CMakeFiles/test.dir/tests/gametest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/tests/gametest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/tests/gametest.cpp -o CMakeFiles/test.dir/tests/gametest.cpp.s
+
+CMakeFiles/test.dir/tests/abilitytest.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/tests/abilitytest.cpp.o: tests/abilitytest.cpp
+CMakeFiles/test.dir/tests/abilitytest.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/tests/abilitytest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/tests/abilitytest.cpp.o -MF CMakeFiles/test.dir/tests/abilitytest.cpp.o.d -o CMakeFiles/test.dir/tests/abilitytest.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/tests/abilitytest.cpp
+
+CMakeFiles/test.dir/tests/abilitytest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/tests/abilitytest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/tests/abilitytest.cpp > CMakeFiles/test.dir/tests/abilitytest.cpp.i
+
+CMakeFiles/test.dir/tests/abilitytest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/tests/abilitytest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/tests/abilitytest.cpp -o CMakeFiles/test.dir/tests/abilitytest.cpp.s
+
+CMakeFiles/test.dir/tests/bosstest.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/tests/bosstest.cpp.o: tests/bosstest.cpp
+CMakeFiles/test.dir/tests/bosstest.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/tests/bosstest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/tests/bosstest.cpp.o -MF CMakeFiles/test.dir/tests/bosstest.cpp.o.d -o CMakeFiles/test.dir/tests/bosstest.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/tests/bosstest.cpp
+
+CMakeFiles/test.dir/tests/bosstest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/tests/bosstest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/tests/bosstest.cpp > CMakeFiles/test.dir/tests/bosstest.cpp.i
+
+CMakeFiles/test.dir/tests/bosstest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/tests/bosstest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/tests/bosstest.cpp -o CMakeFiles/test.dir/tests/bosstest.cpp.s
+
+CMakeFiles/test.dir/tests/playableCharacterTests.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/tests/playableCharacterTests.cpp.o: tests/playableCharacterTests.cpp
+CMakeFiles/test.dir/tests/playableCharacterTests.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.dir/tests/playableCharacterTests.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/tests/playableCharacterTests.cpp.o -MF CMakeFiles/test.dir/tests/playableCharacterTests.cpp.o.d -o CMakeFiles/test.dir/tests/playableCharacterTests.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/tests/playableCharacterTests.cpp
+
+CMakeFiles/test.dir/tests/playableCharacterTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/tests/playableCharacterTests.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/tests/playableCharacterTests.cpp > CMakeFiles/test.dir/tests/playableCharacterTests.cpp.i
+
+CMakeFiles/test.dir/tests/playableCharacterTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/tests/playableCharacterTests.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/tests/playableCharacterTests.cpp -o CMakeFiles/test.dir/tests/playableCharacterTests.cpp.s
+
+CMakeFiles/test.dir/tests/characterTest.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/tests/characterTest.cpp.o: tests/characterTest.cpp
+CMakeFiles/test.dir/tests/characterTest.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/tests/characterTest.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/tests/characterTest.cpp.o -MF CMakeFiles/test.dir/tests/characterTest.cpp.o.d -o CMakeFiles/test.dir/tests/characterTest.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/tests/characterTest.cpp
+
+CMakeFiles/test.dir/tests/characterTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/tests/characterTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csmajs/pgoul002/final-project-awesome-game/tests/characterTest.cpp > CMakeFiles/test.dir/tests/characterTest.cpp.i
+
+CMakeFiles/test.dir/tests/characterTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/tests/characterTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csmajs/pgoul002/final-project-awesome-game/tests/characterTest.cpp -o CMakeFiles/test.dir/tests/characterTest.cpp.s
 
 CMakeFiles/test.dir/src/boss.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/boss.cpp.o: src/boss.cpp
 CMakeFiles/test.dir/src/boss.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/src/boss.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/src/boss.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/boss.cpp.o -MF CMakeFiles/test.dir/src/boss.cpp.o.d -o CMakeFiles/test.dir/src/boss.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/boss.cpp
 
 CMakeFiles/test.dir/src/boss.cpp.i: cmake_force
@@ -100,7 +156,7 @@ CMakeFiles/test.dir/src/boss.cpp.s: cmake_force
 CMakeFiles/test.dir/src/character.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/character.cpp.o: src/character.cpp
 CMakeFiles/test.dir/src/character.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/src/character.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/src/character.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/character.cpp.o -MF CMakeFiles/test.dir/src/character.cpp.o.d -o CMakeFiles/test.dir/src/character.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/character.cpp
 
 CMakeFiles/test.dir/src/character.cpp.i: cmake_force
@@ -114,7 +170,7 @@ CMakeFiles/test.dir/src/character.cpp.s: cmake_force
 CMakeFiles/test.dir/src/playableCharacter.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/playableCharacter.cpp.o: src/playableCharacter.cpp
 CMakeFiles/test.dir/src/playableCharacter.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.dir/src/playableCharacter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.dir/src/playableCharacter.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/playableCharacter.cpp.o -MF CMakeFiles/test.dir/src/playableCharacter.cpp.o.d -o CMakeFiles/test.dir/src/playableCharacter.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/playableCharacter.cpp
 
 CMakeFiles/test.dir/src/playableCharacter.cpp.i: cmake_force
@@ -128,7 +184,7 @@ CMakeFiles/test.dir/src/playableCharacter.cpp.s: cmake_force
 CMakeFiles/test.dir/src/Game.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Game.cpp.o: src/Game.cpp
 CMakeFiles/test.dir/src/Game.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/src/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/src/Game.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Game.cpp.o -MF CMakeFiles/test.dir/src/Game.cpp.o.d -o CMakeFiles/test.dir/src/Game.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/Game.cpp
 
 CMakeFiles/test.dir/src/Game.cpp.i: cmake_force
@@ -142,7 +198,7 @@ CMakeFiles/test.dir/src/Game.cpp.s: cmake_force
 CMakeFiles/test.dir/src/abilities.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/abilities.cpp.o: src/abilities.cpp
 CMakeFiles/test.dir/src/abilities.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/src/abilities.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/src/abilities.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/abilities.cpp.o -MF CMakeFiles/test.dir/src/abilities.cpp.o.d -o CMakeFiles/test.dir/src/abilities.cpp.o -c /home/csmajs/pgoul002/final-project-awesome-game/src/abilities.cpp
 
 CMakeFiles/test.dir/src/abilities.cpp.i: cmake_force
@@ -155,7 +211,11 @@ CMakeFiles/test.dir/src/abilities.cpp.s: cmake_force
 
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/test.cpp.o" \
+"CMakeFiles/test.dir/tests/gametest.cpp.o" \
+"CMakeFiles/test.dir/tests/abilitytest.cpp.o" \
+"CMakeFiles/test.dir/tests/bosstest.cpp.o" \
+"CMakeFiles/test.dir/tests/playableCharacterTests.cpp.o" \
+"CMakeFiles/test.dir/tests/characterTest.cpp.o" \
 "CMakeFiles/test.dir/src/boss.cpp.o" \
 "CMakeFiles/test.dir/src/character.cpp.o" \
 "CMakeFiles/test.dir/src/playableCharacter.cpp.o" \
@@ -165,7 +225,11 @@ test_OBJECTS = \
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-test: CMakeFiles/test.dir/test.cpp.o
+test: CMakeFiles/test.dir/tests/gametest.cpp.o
+test: CMakeFiles/test.dir/tests/abilitytest.cpp.o
+test: CMakeFiles/test.dir/tests/bosstest.cpp.o
+test: CMakeFiles/test.dir/tests/playableCharacterTests.cpp.o
+test: CMakeFiles/test.dir/tests/characterTest.cpp.o
 test: CMakeFiles/test.dir/src/boss.cpp.o
 test: CMakeFiles/test.dir/src/character.cpp.o
 test: CMakeFiles/test.dir/src/playableCharacter.cpp.o
@@ -177,7 +241,7 @@ test: lib/libgtest.a
 test: lib/libgtest_main.a
 test: lib/libgtest.a
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csmajs/pgoul002/final-project-awesome-game/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -274,7 +274,7 @@ void Game::StartGame(const string& name, int characterclass){
 
     necromancer->setNames("Necromancer");
     necromancer->setHealth(400);
-    necromancer->setDamage(15);
+    necromancer->setDamage(22);
     necromancer->setBossAbility(deathcoil);
     necromancer->setBossAbility(shadowbolt);
     necromancer->setBossAbility(curseofdoom);
@@ -290,7 +290,7 @@ void Game::StartGame(const string& name, int characterclass){
 
     eldritchHorror->setNames("Eldritch Horror");
     eldritchHorror->setHealth(600);
-    eldritchHorror->setDamage(20);
+    eldritchHorror->setDamage(25);
     eldritchHorror->setBossAbility(tentaclestrike);
     eldritchHorror->setBossAbility(mindwarp);
     eldritchHorror->setBossAbility(voidblast);
