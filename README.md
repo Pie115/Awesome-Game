@@ -12,16 +12,22 @@ Dylan Nguyen - https://github.com/dylannguyen079.
 
 
 ## Project Description 
-Our team wants to make an RPG fighting type game all in the console. We wanted to make it similar to Final Fantasy, or Pokemon. This project is signifigant to us because our whole group loves to play video games, and grew up playing video games, so doing a game for a final school project is like a dream come true. We want to implement the game just using the C++ console. We want to make the game text based at first, if we have more time in the end we can consider implementing graphics.
-The features that we want to implement consist of the following:
-> * Have the player select a character to play as in the begining. Each with different abilities.
-> * Have the player phase off against several enemies, each with increasing difficulty. 
+Our team wants to make an RPG fighting type game all in the console. We wanted to make it similar to Final Fantasy, or Pokemon. This project is significant to us because our whole group loves to play video games, and grew up playing video games, so doing a game for a final school project is like a dream come true. We want to implement the game just using the C++ console. We want to make the game text based at first, if we have more time in the end we can consider implementing graphics. The features that we want to implement consist of the following:
+> * Have the player select a character to play as in the beginning. Each with different abilities.
+> * Have the player phase off against several enemies, each with increasing difficulty.
 > * Have the payer access an item shop, between battles, where they can upgrade equipment/abilities.
 > * Have a leaderboard based on points earned through several different factors throughout the game.
+The game allows the user to select a character from 3 unique archetypes: Archer, Mage, and Warrior. Each archetype has unique statlines such as health and damage. Each archetype also has 4 abilities unique to them. Each ability has a random chance to strike the enemy. We implemented this because we want the user to use strategy when battling enemies. For example, the polymorph ability from Mage should do significant damage, however will have a very small chance to hit. We implemented this fighting style because we felt like it was the best way to balance each character and abilities. When you select a character, you will be entered into a training round where you fight a dummy. After defeating the dummy, the game will begin and you will fight 3 bosses. The combat controls of this game are simple. You can either attack with your abilities, block, or concede. You must defeat the first boss before moving on to the next boss. Each boss has unique voice lines that are triggered at the beginning of the round, after each attack, and when they are defeated.
+
  > ![Untitled Diagram](https://user-images.githubusercontent.com/116398521/222713848-54d9edf4-1966-45be-8cf6-8baefd53bc3d.jpg)
  
  > Description: The character class is an abstract class with derived classes Boss and PlayableCharacter. The Boss and PlayableCharacter class will have abilities, items and special traits that will affect overall gameplay. The Boss and Character classes will be handled by the Game and GameManager.
  > 
+ ## Class Description
+To make this game, we implemented several classes with unique attributes and methods. The character class is the base class of boss and playable character. The character class contains attributes and methods that boss and playable character inherits. For example, the character class contains name, health, damage, setHealth(), setDamage(), takeDamager(), and heal() which the boss and playable character class share. The boss class is unique in the sense that it has its own attributes and methods. The boss has his own abilities and items separate from the character class. The bosses also have unique voice lines that are only applicable to the bosses. On the other hand, the playable character is unique in the sense that it has abilities specific to the playable character and not applicable for the boss.
+We have an abilities class that defines attributes and methods for character abilities. Both the boss and the playable character class will take attributes and methods from this class such as abilityName, damageMultiplier, and percentMiss.
+The game class is the most important class in terms of the game’s logic. It manages the flow of the game by interacting with players and containing the character entities. The game runs in a loop and creates new instances of playable characters and bosses. The game calls functions from the abilities class such as AttackMiss() to determine the combat of the game.
+
 Single Responsibility Principle:
 Adding a game and game manager class to separate the UI management from data managment. The game manager manages the inputs of the game such as starting/quitting the game, creating a character, using abilities, and calling the game itself to input the actions in the game class. The game class takes the inputs from the game manager and outputs depending on the game manager. The changes allow us to separate the outputs and the inputs which allows us to have more organized functionality.
 
