@@ -59,7 +59,9 @@ As a playable character, we don't need voicelines. We decided that it should be 
 
  > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225711463-8e31cbc2-8f45-47fd-aac8-67dc927cccdf.png)
 
+ > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225711778-2ce18d5d-dab7-4a9a-97f6-bafb797f0ac3.png)
 
+ > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225711778-2ce18d5d-dab7-4a9a-97f6-bafb797f0ac3.png)
 
  ## Installation/Usage
  In order to install and run our program, you either need to clone the repository, or unzip the file on the PC that has CMake installed. After, run these following commands in the command line. 
