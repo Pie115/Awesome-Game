@@ -53,5 +53,7 @@ As a playable character, we don't need voicelines. We decided that it should be 
  ## Testing
  Unit Testing
  > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225704817-eacdc2af-0017-4034-9286-7cdd25248daf.png)
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ Valgrind Report
+ > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225705137-5be93eb5-6776-4748-aec8-ea6d5b008c7b.png)
+ 
  
