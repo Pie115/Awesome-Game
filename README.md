@@ -47,7 +47,8 @@ As a playable character, we don't need voicelines. We decided that it should be 
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225709527-3ca614d9-a867-4f57-9045-2ad351d76fba.png)
+ > 
  ## Installation/Usage
  In order to install and run our program, you either need to clone the repository, or unzip the file on the PC that has CMake installed. After, run these following commands in the command line. 
  
@@ -62,6 +63,7 @@ As a playable character, we don't need voicelines. We decided that it should be 
  ### Unit Testing
  
  > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225704817-eacdc2af-0017-4034-9286-7cdd25248daf.png)
+ > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225709742-8dc2d132-1934-460f-bc94-9f219e2d54b0.png)
  
  ### Valgrind Report
  
