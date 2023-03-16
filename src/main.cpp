@@ -7,9 +7,9 @@ using namespace std;
 int main()
 {
     Game* game = new Game();
-    game->MainMenu();
-    game->RunGame();
-
+    if(game->MainMenu() != 0){
+        game->RunGame();
+    }
     delete game;
     return 0;
 }

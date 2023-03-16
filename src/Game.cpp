@@ -84,7 +84,7 @@ Game::~Game(){
 }
 
 
-void Game::MainMenu(){
+int Game::MainMenu(){
     int menu_choice = 0;
     cout<<"Welcome to Awesome Game!!"<<endl;
     cout<<"Input 0 to quit game"<<endl;
@@ -115,8 +115,9 @@ void Game::MainMenu(){
     }
 
     if(menu_choice == 0){
-        exit(0);
+        return 0;
     }
+    return 1;
 }
 
 void Game::StartGame(const string& name, int characterclass){
@@ -318,7 +319,7 @@ void Game::StartGame(const string& name, int characterclass){
 }
 
 
-void Game::RunGame(){ 
+int Game::RunGame(){ 
     string name;
     int characterclass;
     cout<<"Welcome fighter, please enter a name you would like to go by:"<<endl;
@@ -410,7 +411,7 @@ void Game::RunGame(){
             }
             else if(player_action == 3){
                 cout<<"You conceded the match, the game will end"<<endl;
-                exit(0);
+                return 0;
             }
             if(tempboss->getHealth() > 0){
                 cout<<"Bosses turn:"<<endl;
@@ -453,6 +454,9 @@ void Game::RunGame(){
             cout<<"You're about to face the last boss! Goodluck warrior."<<endl<<endl;
         }
     }
-    cout<<"Congratulations warrior, you have defeated every boss. Let this day be a reminder of your greatness!"<<endl;
+    if(bossOrder.size() > 0){
+        cout<<"Congratulations warrior, you have defeated every boss. Let this day be a reminder of your greatness!"<<endl;
+    }
+    return 0;
 }
     
