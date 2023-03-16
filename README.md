@@ -49,7 +49,14 @@ As a playable character, we don't need voicelines. We decided that it should be 
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ In order to install and run our program, you either need to clone the repository, or unzip the file on the PC that has CMake installed. After, run these following commands in the command line. 
+ 
+ 1. cmake .
+ 2. make
+ 3. ./AwesomeGame
+
+ The following commands above will create an executable for the game, then run it.
+ 
  ## Testing
  
  ### Unit Testing
