@@ -30,8 +30,8 @@ We have an abilities class that defines attributes and methods for character abi
 We have an item class that defines attributes and methods for character items. Both the boss and the playable character class will take attributes and methods from this class such as itemName, getDamagePoints and getHealPoints.
 The game class is the most important class in terms of the game’s logic. It manages the flow of the game by interacting with players and containing the character entities. The game runs in a loop and creates new instances of playable characters and bosses. The game calls functions from the abilities class such as AttackMiss() to determine the combat of the game.
 
-Single Responsibility Principle:
-Adding a game and game manager class to separate the UI management from data managment. The game manager manages the inputs of the game such as starting/quitting the game, creating a character, using abilities, and calling the game itself to input the actions in the game class. The game class takes the inputs from the game manager and outputs depending on the game manager. The changes allow us to separate the outputs and the inputs which allows us to have more organized functionality.
+Open Close Princible:
+We designed the character, playable character, and boss to have open close princible. We made it in such a way so that if we wanted to add any features to to any of these character, we can just add those features andf functions without making any changes to the previous features. We did this because in any sort of game, you want to be able to make updates, and add content, however you wouldn't want to go through the trouble of changing anything that worked previously if you just want to add a new feature.
 
 Liskov Substitution Principle:
 We add bosses with their own unique items and abilities. The playable character class have their own unique items and abilities. These classes are inherited from the character class. They all have the same basic attack with different abilities and items. This will prevent the playable character from using abilities and items that only a boss should use and vice versa.
