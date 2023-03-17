@@ -9,11 +9,13 @@ ADD_EXECUTABLE(AwesomeGame
     src/playableCharacter.cpp
     src/Game.cpp
     src/abilities.cpp
+    src/items.cpp
 )
 
 ADD_EXECUTABLE(test
     tests/gametest.cpp
     tests/abilitytest.cpp
+    tests/itemstest.cpp
     tests/bosstest.cpp
     tests/playableCharacterTests.cpp
     tests/characterTest.cpp
@@ -22,6 +24,7 @@ ADD_EXECUTABLE(test
     src/playableCharacter.cpp
     src/Game.cpp
     src/abilities.cpp
+    src/items.cpp
 )
 
 target_link_libraries(test gmock gtest gtest_main)
