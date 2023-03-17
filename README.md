@@ -75,6 +75,7 @@ As a playable character, we don't need voicelines. We decided that it should be 
  ## Testing
  
  ### Unit Testing
+ We unit tested every function in the project. The only two functions we didn't unit test were UI functions. Other than that, we were able to unit test everything else.
  
  > ![image](https://user-images.githubusercontent.com/116398521/226012212-80741fdf-6a5e-4a2e-ba61-686c4cfb5baa.png)
  
