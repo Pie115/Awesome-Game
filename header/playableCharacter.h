@@ -2,6 +2,7 @@
 #define PLAYABLECHARACTER_HPP
 #include "character.h"
 #include "abilities.h"
+#include "items.h"
 
 using namespace std;
 
@@ -9,15 +10,16 @@ class PlayableCharacter : public Character
 {
     private:
         vector<abilities*> PlayableAbility; 
-        vector<string> PlayableItems; 
+        vector<items*> PlayableItems; 
     public:
         void setPlayableAbility(abilities* a); 
-        void setPlayableItems(const string& a); 
+        void setPlayableItems(items* a); 
 
         int getAbilityNum();
+        int getItemNum();
         
         abilities* getPlayableAbility(int index);
-        string getPlayableItems(int index);
+        items* getPlayableItems(int index);
 };
 
 #endif //PLAYABLECHARACTER_HPP
