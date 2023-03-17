@@ -19,7 +19,8 @@ Our team wants to make an RPG fighting type game all in the console. We wanted t
 The game allows the user to select a character from 3 unique archetypes: Archer, Mage, and Warrior. Each archetype has unique statlines such as health and damage. Each archetype also has 4 abilities unique to them. Each ability has a random chance to strike the enemy. We implemented this because we want the user to use strategy when battling enemies. For example, the polymorph ability from Mage should do significant damage, however will have a very small chance to hit. We implemented this fighting style because we felt like it was the best way to balance each character and abilities. When you select a character, the game will begin and you will fight 3 bosses. The combat controls of this game are simple. You can either attack with your abilities, block, or concede. You must defeat the first boss before moving on to the next boss. Each boss has unique voice lines that are triggered at the beginning of the round, after each attack, and when they are defeated.
 
 ## UML Diagram
-> ![Cs100 UML](https://user-images.githubusercontent.com/122497831/225538572-ab36ee8c-e195-4667-9f5c-6cf4087c2600.png)
+> ![image](https://user-images.githubusercontent.com/116398521/225921748-1ed59058-925b-4849-97c3-9b35fb4ca274.jpeg)
+
  
  > Description: The character class is an abstract class with derived classes Boss and PlayableCharacter. The Boss and PlayableCharacter class will have abilities, items and special traits that will affect overall gameplay. The Boss and Character classes will be handled by the Game Class.
  > 
