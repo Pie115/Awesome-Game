@@ -55,7 +55,9 @@ class Game
         abilities* lightingstrike;
         abilities* polymorph;
 
-
+        //items
+        items* healingpotion;
+        items* damagepotion;
 
 
     public:
