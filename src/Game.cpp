@@ -43,6 +43,10 @@ Game::Game(){
     lightingstrike = new abilities();
     polymorph = new abilities();
 
+    //items
+    healingpotion = new items();
+    damagepotion = new items();
+
 }
 
 
@@ -81,6 +85,10 @@ Game::~Game(){
     delete iceshard;
     delete lightingstrike;
     delete polymorph;
+
+    delete healingpotion;
+    delete damagepotion;
+
 }
 
 
@@ -101,7 +109,6 @@ int Game::MainMenu(){
             cout<<"With smart decision making and luck, you should be victorious"<<endl;
             cout<<"Good luck! You will need it >:)"<<endl;
         }
-
         else{
         cin.clear();
         cin.ignore(1, '\n');
@@ -228,6 +235,14 @@ void Game::StartGame(const string& name, int characterclass){
     polymorph->setAbilityDamageMultiplier(1000);
     polymorph->setAbilityPercentMiss(0);
 
+    healingpotion->setItemName("Healing Potion");
+    healingpotion->setHealPoints(10);
+    healingpotion->setDamagePoints(0);
+
+    damagepotion->setItemName("Damage Potion");
+    damagepotion->setHealPoints(0);
+    damagepotion->setDamagePoints(5);
+
     player->setNames(name);
     player->setHealth(400);
     player->setDamage(20);
@@ -239,6 +254,8 @@ void Game::StartGame(const string& name, int characterclass){
         player->setPlayableAbility(shieldbash);
         player->setPlayableAbility(whirlwind);
         player->setPlayableAbility(heartpierce);
+        player->setPlayableItems(healingpotion);
+        player->setPlayableItems(damagepotion);
     }
     else if(characterclass == 2){
         cout<<"You've chosen the archer"<<endl;
@@ -246,6 +263,8 @@ void Game::StartGame(const string& name, int characterclass){
         player->setPlayableAbility(explosivearrow);
         player->setPlayableAbility(multishot);
         player->setPlayableAbility(headshot);
+        player->setPlayableItems(healingpotion);
+        player->setPlayableItems(damagepotion);
     }
     else if(characterclass == 3){
         cout<<"You've chosen the mage"<<endl;
@@ -253,6 +272,8 @@ void Game::StartGame(const string& name, int characterclass){
         player->setPlayableAbility(iceshard);
         player->setPlayableAbility(lightingstrike);
         player->setPlayableAbility(polymorph);
+        player->setPlayableItems(healingpotion);
+        player->setPlayableItems(damagepotion);
     }
 
 
@@ -355,15 +376,17 @@ int Game::RunGame(){
             cout<<tempboss->getNames()<<" Health: "<<tempboss->getHealth()<<endl;
             cout<<"Players turn:"<<endl;
             cout<<"1: Use Ability"<<endl;
-            cout<<"2: Block"<<endl;
-            cout<<"3: Concede"<<endl;
-            cout<<"4: Info"<<endl;
+            cout<<"2: Use Item"<<endl;
+            cout<<"3: Block"<<endl;
+            cout<<"4: Concede"<<endl;
+            cout<<"5: Info"<<endl;
             cin>>player_action;
 
-            while(player_action < 1 || player_action >= 4 || (!cin.good())){
-                if(player_action == 4){
+            while(player_action < 1 || player_action >= 5 || (!cin.good())){
+                if(player_action == 5){
                     cout<<"Here is a list of actions you may perform against the boss"<<endl;
                     cout<<"Use ability allows you to select an ability from a list of your abilities"<<endl;
+                    cout<<"Use item allows you to select an item from a list of your items."<<endl;
                     cout<<"Block allows you to block this turn. If you block you will cut the damage you take from the boss in half"<<endl;
                     cout<<"Concede allows you to leave the match early and end the game"<<endl;
                 }
@@ -373,9 +396,10 @@ int Game::RunGame(){
                     cout<<"Enter a valid option: "<<endl;
                 }
                 cout<<"1: Use Ability"<<endl;
-                cout<<"2: Block"<<endl;
-                cout<<"3: Concede"<<endl;
-                cout<<"4: Info"<<endl;
+                cout<<"2: Use Item"<<endl;
+                cout<<"3: Block"<<endl;
+                cout<<"4: Concede"<<endl;
+                cout<<"5: Info"<<endl;
                 cin>>player_action;
             }
             cout<<endl;
@@ -407,9 +431,36 @@ int Game::RunGame(){
                 player_action = 0;
             }
             else if(player_action == 2){
-                block = true;
+                cout<<"Which item would you like to use?"<<endl;
+                cout<<"Choices:"<<endl;
+
+                for(int i = 0; i < player->getItemNum(); i++){
+                    cout<<i+1<<": "<<(player->getPlayableItems(i))->getItemName()<<endl;
+                }
+                cin>>player_action;
+                while(player_action < 1 || player_action > player->getItemNum() || (!cin.good())){
+                    cout<<"That is not a valid choice, please select a valid item"<<endl;
+                    cout<<"Choices:"<<endl;
+
+                    for(int i = 0; i < player->getItemNum(); i++){
+                        cout<<i+1<<": "<<(player->getPlayableItems(i))->getItemName()<<endl;
+                    }
+                    cin>>player_action;
+                }       
+                cout<<player->getNames()<<" uses "<<(player->getPlayableItems(player_action-1))->getItemName()<<endl;         
+                if((player->getPlayableItems(player_action-1))->getItemName() == "Healing Potion"){
+                    cout<<player->getNames()<<" heals for "<<(player->getPlayableItems(player_action-1))->getHealPoints()<<endl;
+                    player->setHealth(player->getHealth() + (player->getPlayableItems(player_action-1))->getHealPoints());
+                }
+                else if((player->getPlayableItems(player_action-1))->getItemName() == "Damage Potion"){
+                    cout<<tempboss->getNames()<<" takes "<<(player->getPlayableItems(player_action-1))->getDamagePoints()<<" damage!"<<endl;
+                    tempboss->takeDamage((player->getPlayableItems(player_action-1))->getDamagePoints());
+                }
             }
             else if(player_action == 3){
+                block = true;
+            }
+            else if(player_action == 4){
                 cout<<"You conceded the match, the game will end"<<endl;
                 return 0;
             }
