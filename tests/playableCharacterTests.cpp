@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "../header/abilities.h"
+#include "../header/items.h"
 #include "../header/boss.h"
 #include "../header/character.h"
 #include "../header/Game.h"
@@ -18,7 +19,7 @@ TEST(playerTest, setAbilityTest) {
 
 TEST(playerTest, setItemTest) {
     PlayableCharacter* p = new PlayableCharacter();
-    string item = "item";
+    items* item = new items();
     EXPECT_NO_THROW (p->setPlayableItems(item));
 }
 
@@ -31,7 +32,7 @@ TEST(playerTest, getAbilityTest) {
 
 TEST(playerTest, getItemTest) {
     PlayableCharacter* p = new PlayableCharacter();
-    string item = "item";
+    items* item = new items();
     p->setPlayableItems(item);
     EXPECT_NO_THROW (p->getPlayableItems(0));
 }
