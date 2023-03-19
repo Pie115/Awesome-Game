@@ -19,17 +19,19 @@ Our team wants to make an RPG fighting type game all in the console. We wanted t
 The game allows the user to select a character from 3 unique archetypes: Archer, Mage, and Warrior. Each archetype has unique statlines such as health and damage. Each archetype also has 4 abilities unique to them. Each ability has a random chance to strike the enemy. We implemented this because we want the user to use strategy when battling enemies. For example, the polymorph ability from Mage should do significant damage, however will have a very small chance to hit. We implemented this fighting style because we felt like it was the best way to balance each character and abilities. When you select a character, the game will begin and you will fight 3 bosses. The combat controls of this game are simple. You can either attack with your abilities, block, or concede. You must defeat the first boss before moving on to the next boss. Each boss has unique voice lines that are triggered at the beginning of the round, after each attack, and when they are defeated.
 
 ## UML Diagram
-> ![Cs100 UML](https://user-images.githubusercontent.com/122497831/225538572-ab36ee8c-e195-4667-9f5c-6cf4087c2600.png)
+> ![image](https://user-images.githubusercontent.com/116398521/225921748-1ed59058-925b-4849-97c3-9b35fb4ca274.jpeg)
+
  
  > Description: The character class is an abstract class with derived classes Boss and PlayableCharacter. The Boss and PlayableCharacter class will have abilities, items and special traits that will affect overall gameplay. The Boss and Character classes will be handled by the Game Class.
  > 
  ## Class Description
 To make this game, we implemented several classes with unique attributes and methods. The character class is the base class of boss and playable character. The character class contains attributes and methods that boss and playable character inherits. For example, the character class contains name, health, damage, setHealth(), setDamage(), takeDamager(), and heal() which the boss and playable character class share. The boss class is unique in the sense that it has its own attributes and methods. The boss has his own abilities and items separate from the character class. The bosses also have unique voice lines that are only applicable to the bosses. On the other hand, the playable character is unique in the sense that it has abilities specific to the playable character and not applicable for the boss.
 We have an abilities class that defines attributes and methods for character abilities. Both the boss and the playable character class will take attributes and methods from this class such as abilityName, damageMultiplier, and percentMiss.
+We have an item class that defines attributes and methods for character items. Both the boss and the playable character class will take attributes and methods from this class such as itemName, getDamagePoints and getHealPoints.
 The game class is the most important class in terms of the game’s logic. It manages the flow of the game by interacting with players and containing the character entities. The game runs in a loop and creates new instances of playable characters and bosses. The game calls functions from the abilities class such as AttackMiss() to determine the combat of the game.
 
-Single Responsibility Principle:
-Adding a game and game manager class to separate the UI management from data managment. The game manager manages the inputs of the game such as starting/quitting the game, creating a character, using abilities, and calling the game itself to input the actions in the game class. The game class takes the inputs from the game manager and outputs depending on the game manager. The changes allow us to separate the outputs and the inputs which allows us to have more organized functionality.
+Open Close Princible:
+We designed the character, playable character, and boss to have open close princible. We made it in such a way so that if we wanted to add any features to to any of these character, we can just add those features andf functions without making any changes to the previous features. We did this because in any sort of game, you want to be able to make updates, and add content, however you wouldn't want to go through the trouble of changing anything that worked previously if you just want to add a new feature.
 
 Liskov Substitution Principle:
 We add bosses with their own unique items and abilities. The playable character class have their own unique items and abilities. These classes are inherited from the character class. They all have the same basic attack with different abilities and items. This will prevent the playable character from using abilities and items that only a boss should use and vice versa.
@@ -49,19 +51,17 @@ As a playable character, we don't need voicelines. We decided that it should be 
  
  > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225711006-06588a92-8bc6-4d1b-8552-18f724539b1d.png)
 
- > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225711463-8e31cbc2-8f45-47fd-aac8-67dc927cccdf.png)
+ > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/226020359-260906d4-c0be-43fb-b1d0-e1b43dea7f7c.png)
 
- > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225711778-2ce18d5d-dab7-4a9a-97f6-bafb797f0ac3.png)
+![image](https://user-images.githubusercontent.com/116398521/226018335-988a7e65-9b75-4a41-8a4b-cafd5c748810.png)
 
- > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225711778-2ce18d5d-dab7-4a9a-97f6-bafb797f0ac3.png)
+![image](https://user-images.githubusercontent.com/116398521/226019191-dd5e9e9a-fb2c-4cba-877a-200cc9d29f8e.png)
 
- > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225712055-f42fcda5-479b-4a5a-a9f0-1f667f3735ac.png)
+![image](https://user-images.githubusercontent.com/116398521/226019727-dd2f1331-e16f-4ccc-9c6b-1c54ad8b1fd2.png)
 
- > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225712147-0bb98fad-c582-49e8-9ca9-a7d5fcc2e6f1.png)
+![image](https://user-images.githubusercontent.com/116398521/226020129-d9b4d186-d905-4a8a-b394-afa89a8bd6ce.png)
 
- > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225712277-7f605f96-a073-4e54-9ac6-ca9ba19bbbc0.png)
-
- > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225712381-b652c641-5b3e-41cd-badb-abec68c80d65.png)
+![image](https://user-images.githubusercontent.com/116398521/226020348-fd128be3-76f2-4566-aefa-4c331aca63b4.png)
 
  ## Installation/Usage
  In order to install and run our program, you either need to clone the repository, or unzip the file on the PC that has CMake installed. After, run these following commands in the command line. 
@@ -75,11 +75,12 @@ As a playable character, we don't need voicelines. We decided that it should be 
  ## Testing
  
  ### Unit Testing
+ We unit tested every function in the project. The only two functions we didn't unit test were UI functions. Other than that, we were able to unit test everything else.
  
- > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225704817-eacdc2af-0017-4034-9286-7cdd25248daf.png)
+ > ![image](https://user-images.githubusercontent.com/116398521/226012212-80741fdf-6a5e-4a2e-ba61-686c4cfb5baa.png)
  
  ### Valgrind Report
  
- > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/225705137-5be93eb5-6776-4748-aec8-ea6d5b008c7b.png)
+ > ![Cs100 UML](https://user-images.githubusercontent.com/6378028/226017221-0c6418d6-babe-4799-a381-f9979dc3e477.png)
  
  
