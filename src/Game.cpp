@@ -448,11 +448,11 @@ int Game::RunGame(){
                     cin>>player_action;
                 }       
                 cout<<player->getNames()<<" uses "<<(player->getPlayableItems(player_action-1))->getItemName()<<endl;         
-                if((player->getPlayableItems(player_action-1))->getItemName() == "Healing Potion"){
+                if((player->getPlayableItems(player_action-1))->getHealPoints() > 0){
                     cout<<player->getNames()<<" heals for "<<(player->getPlayableItems(player_action-1))->getHealPoints()<<endl;
                     player->setHealth(player->getHealth() + (player->getPlayableItems(player_action-1))->getHealPoints());
                 }
-                else if((player->getPlayableItems(player_action-1))->getItemName() == "Damage Potion"){
+                else if((player->getPlayableItems(player_action-1))->getDamagePoints() > 0){
                     cout<<tempboss->getNames()<<" takes "<<(player->getPlayableItems(player_action-1))->getDamagePoints()<<" damage!"<<endl;
                     tempboss->takeDamage((player->getPlayableItems(player_action-1))->getDamagePoints());
                 }
